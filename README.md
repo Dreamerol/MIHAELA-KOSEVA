@@ -3,17 +3,6 @@
 
 <div align="center">
 
-# ⚛️ 𝗠𝗜𝗛𝗔𝗘𝗟𝗔 𝗞𝗢𝗦𝗘𝗩𝗔 ∫ 𝗦𝗪𝗘 × 𝗔𝗜 & 𝗗𝗔𝗧𝗔
-
-</div>
-
-
-
-
-
-
-<div align="center">
-
 <a href="https://github.com/Dreamerol/CARDFOLIO">
   <img 
     src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/MIHAELA-KOSEVA.png"
@@ -28,7 +17,18 @@
 
 
 
+<div align="center">
+
+# ⚛️ 𝗠𝗜𝗛𝗔𝗘𝗟𝗔 𝗞𝗢𝗦𝗘𝗩𝗔 ∫ 𝗦𝗪𝗘 × 𝗔𝗜 & 𝗗𝗔𝗧𝗔
+
+</div>
+
+
+
+
 <br>
+
+
 
 
 
