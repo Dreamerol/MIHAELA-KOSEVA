@@ -18,7 +18,7 @@
 
 <div align="center">
 
-<a href="https://github.com/Dreamerol/CARDFOLIO">
+<a href="https://www.linkedin.com/in/mihaela-koseva-software-engineer/">
   <img 
     src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/MIHAELA-KOSEVA.png"
     width="100%"
