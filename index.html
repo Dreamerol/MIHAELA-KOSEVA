@@ -1,1071 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mihaela Koseva • Software Engineer • AI • Data</title>
+<title>Mihaela Koseva</title>
 
 <style>
 
-:root {
-    --bg: #000000;
-    --text: #ffffff;
-    --muted: #bdbdbd;
-    --line: #222222;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background: #000000 !important;
+}
+
+body {
+    background-color: #000000 !important;
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
 * {
     box-sizing: border-box;
 }
 
-html {
-    background: #000;
-    scroll-behavior: smooth;
-}
-
-body {
+.page {
+    width: 100%;
     margin: 0;
     padding: 0;
-    background: #000;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+    background: #000000;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-img {
+.image {
     display: block;
-    max-width: 100%;
-}
-
-.container {
-    width: 100%;
-    padding: 0 3vw;
-}
-
-.center {
-    text-align: center;
-}
-
-.hero-image {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.full-image {
     width: 100%;
     height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-.spacer-sm {
-    height: 35px;
+.image-link {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 .spacer {
-    height: 80px;
-}
-
-.spacer-lg {
-    height: 130px;
-}
-
-/* =========================
-   CONTACT
-   ========================= */
-
-.contact {
-    text-align: center;
-    font-size: clamp(15px, 1.5vw, 25px);
-    font-weight: 700;
-    line-height: 1.8;
-    padding: 0 2vw;
-}
-
-.contact a {
-    transition: opacity .2s ease;
-}
-
-.contact a:hover {
-    opacity: .6;
-}
-
-/* =========================
-   TITLES
-   ========================= */
-
-.title {
-    text-align: center;
-    font-size: clamp(30px, 4vw, 70px);
-    line-height: 1.1;
-    font-weight: 800;
-    margin: 15px 0;
-}
-
-.subtitle {
-    text-align: center;
-    font-size: clamp(24px, 3vw, 52px);
-    line-height: 1.2;
-    font-weight: 800;
-    margin: 15px 0;
-}
-
-/* =========================
-   INTRO
-   ========================= */
-
-.intro {
-    max-width: 1500px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: clamp(18px, 1.6vw, 29px);
-    line-height: 1.7;
-}
-
-.intro strong {
-    font-weight: 800;
-}
-
-/* =========================
-   PROJECTS
-   ========================= */
-
-.projects {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin: 0 auto;
-}
-
-.project {
-    text-align: center;
-}
-
-.project a {
-    display: block;
-}
-
-.project img {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    border-radius: 14px;
-    transition:
-        transform .25s ease,
-        opacity .25s ease;
-}
-
-.project img:hover {
-    transform: scale(1.015);
-    opacity: .88;
-}
-
-.project-title {
-    margin-top: 15px;
-    font-size: clamp(20px, 2vw, 34px);
-    line-height: 1.2;
-    font-weight: 800;
-}
-
-/* =========================
-   TEXT SECTIONS
-   ========================= */
-
-.text-section {
-    max-width: 1500px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: clamp(18px, 1.5vw, 28px);
-    line-height: 1.75;
-}
-
-.text-section strong {
-    font-weight: 800;
-}
-
-/* =========================
-   FOOTER
-   ========================= */
-
-.footer-title {
-    text-align: center;
-    font-size: clamp(25px, 3vw, 50px);
-    font-weight: 800;
-}
-
-.footer-text {
-    max-width: 1500px;
-    margin: 30px auto;
-    text-align: center;
-    font-size: clamp(12px, 1vw, 18px);
-    line-height: 1.7;
-}
-
-.footer-muted {
-    color: #777;
-}
-
-/* =========================
-   BUTTONS
-   ========================= */
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.buttons a img {
-    height: 100px;
-    width: auto;
-    transition: transform .2s ease, opacity .2s ease;
-}
-
-.buttons a img:hover {
-    transform: translateY(-4px);
-    opacity: .85;
-}
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 900px) {
-
-    .projects {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .spacer-lg {
-        height: 80px;
-    }
-
-    .spacer {
-        height: 50px;
-    }
-
-    .buttons a img {
-        height: 75px;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .container {
-        padding: 0 15px;
-    }
-
-    .contact {
-        line-height: 2;
-    }
-
-    .buttons {
-        gap: 8px;
-    }
-
-    .buttons a img {
-        height: 60px;
-    }
+    height: 35px;
+    background: #000000;
 }
 
 </style>
 </head>
 
-
 <body>
 
+<div class="page">
 
-<!-- =========================================================
-     HERO
-     ========================================================= -->
-
-<div class="container">
-
-    <a href="https://github.com/Dreamerol/CARDFOLIO">
-
+    <!-- TOP IMAGE -->
+    <a
+        class="image-link"
+        href="https://github.com/Dreamerol/CARDFOLIO"
+    >
         <img
-            class="hero-image"
+            class="image"
             src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/MIHAELA%20KOSEVA-DREAMEROL.jpg"
             alt="Mihaela Koseva"
         >
-
     </a>
 
-</div>
+
+    <div class="spacer"></div>
 
 
-<div class="spacer"></div>
-
-
-<!-- =========================================================
-     TECH STACK
-     ========================================================= -->
-
-<div class="container">
-
-    <a href="https://github.com/Dreamerol/CARDFOLIO">
-
+    <!-- TECH STACK -->
+    <a
+        class="image-link"
+        href="https://github.com/Dreamerol/CARDFOLIO"
+    >
         <img
-            class="full-image"
+            class="image"
             src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/TECH-STACK-mihaela-koseva.png"
             alt="Mihaela Koseva Tech Stack"
         >
-
     </a>
 
-</div>
 
+    <div class="spacer"></div>
 
-<div class="spacer-sm"></div>
 
-
-<!-- =========================================================
-     CONTACT
-     ========================================================= -->
-
-<div class="contact">
-
-📫 𝗖𝗢𝗡𝗧𝗔𝗖𝗧 •
-✉️ 𝗠𝗜𝗖𝗛𝗔𝗘𝗟𝗔𝗞𝗢𝗦𝗘𝗩𝗔@𝗚𝗠𝗔𝗜𝗟.𝗖𝗢𝗠 •
-
-<a href="https://www.linkedin.com/in/mihaela-koseva-software-engineer">
-🔗 𝗟𝗜𝗡𝗞𝗘𝗗𝗜𝗡
-</a> •
-
-<a href="https://github.com/Dreamerol/PORTFOLIO">
-🌐 𝗣𝗢𝗥𝗧𝗙𝗢𝗟𝗜𝗢
-</a> •
-
-<a href="https://github.com/Dreamerol/CARDFOLIO">
-🧩 𝗥𝗘𝗣𝗢𝗦
-</a> •
-
-<a href="https://github.com/Dreamerol/RESUME">
-✅ 𝗥𝗘𝗦𝗨𝗠𝗘
-</a> •
-
-<a href="https://github.com/Dreamerol/ALLSTATS">
-📊 𝗔𝗟𝗟𝗦𝗧𝗔𝗧𝗦
-</a>
-
-</div>
-
-
-<div class="spacer-lg"></div>
-
-
-<!-- =========================================================
-     MAIN TITLE
-     ========================================================= -->
-
-<section class="container center">
-
-    <div class="title">
-
-        <a href="https://github.com/Dreamerol/PORTFOLIO">
-
-            🟢 𝗦𝗢𝗙𝗧𝗪𝗔𝗥𝗘 𝗘𝗡𝗚𝗜𝗡𝗘𝗘𝗥
-            ∫
-            𝗗𝗔𝗧𝗔 • 𝗠𝗔𝗖𝗛𝗜𝗡𝗘 𝗟𝗘𝗔𝗥𝗡𝗜𝗡𝗚
-
-        </a>
-
-    </div>
-
-
-    <div class="title">
-
-        <a href="https://www.uni-sofia.bg" target="_blank">
-
-            𝗙𝗠𝗜,
-            𝗦𝗼𝗳𝗶𝗮 𝗨𝗻𝗶𝘃𝗲𝗿𝘀𝗶𝘁𝘆
-            “𝗦𝘁. 𝗞𝗹𝗶𝗺𝗲𝗻𝘁 𝗢𝗵𝗿𝗶𝗱𝘀𝗸𝗶”
-
-        </a>
-
-    </div>
-
-
-    <div class="title">
-
-        ∫ Data → Systems
-
-    </div>
-
-</section>
-
-
-<div class="spacer"></div>
-
-
-<!-- =========================================================
-     INTRO
-     ========================================================= -->
-
-<section class="intro container">
-
-    <b>
-        Mihaela Koseva (Михаела Косева)
-    </b>
-
-    •
-
-    Sofia University (Софийски университет)
-
-    •
-
-    СМГ
-
-    <br><br>
-
-    Developed AI-powered software solutions and data-centric systems.
-
-    <br>
-
-    Worked with
-    <b>Python</b>,
-    <b>Data Science</b>,
-    <b>Machine Learning</b>,
-    and AI technologies to build intelligent, scalable applications.
-
-    <br><br>
-
-    Designed and implemented AI workflows,
-    data pipelines,
-    feature engineering solutions,
-    and production-ready components.
-
-    Applied machine learning algorithms,
-    data analytics,
-    and automation techniques for systems.
-
-    <br><br>
-
-    Integrated AI capabilities into software platforms through
-    ML model development,
-    evaluation,
-    and engineering practices.
-
-    Built backend services,
-    REST API integrations,
-    and solutions for distributed systems.
-
-</section>
-
-
-<div class="spacer-lg"></div>
-
-
-<!-- =========================================================
-     PROJECT TITLE
-     ========================================================= -->
-
-<section class="container center">
-
-    <div class="title">
-
-        <a href="https://github.com/Dreamerol/RESUME">
-
-            ✅ 𝗠𝗜𝗛𝗔𝗘𝗟𝗔 𝗞𝗢𝗦𝗘𝗩𝗔
-            •
-            𝗦𝗪𝗘 ∫ 𝗗𝗔𝗧𝗔
-            •
-            𝗔𝗣𝗣𝗟𝗜𝗘𝗗 𝗠𝗟
-
-        </a>
-
-    </div>
-
-
-    <div class="subtitle">
-
-        𝟯𝟬+
-        𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴
-        •
-        𝗔𝗜
-        •
-        𝗗𝗮𝘁𝗮 𝗣𝗿𝗼𝗷𝗲𝗰𝘁𝘀
-
-    </div>
-
-</section>
-
-
-<div class="spacer"></div>
-
-
-<!-- =========================================================
-     PROJECTS
-     ========================================================= -->
-
-<section class="container">
-
-<div class="projects">
-
-
-    <div class="project">
-
-        <a href="https://github.com/Dreamerol/NEURAL-NETWORKS">
-
-            <img
-                src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/ZZZZZZZZZNNNNN777.jpg"
-                alt="Neural Networks"
-            >
-
-        </a>
-
-        <div class="project-title">
-            𝗡𝗘𝗨𝗥𝗔𝗟 𝗡𝗘𝗧𝗪𝗢𝗥𝗞𝗦
-        </div>
-
-    </div>
-
-
-    <div class="project">
-
-        <a href="https://github.com/Dreamerol/NUMERICAL-ANALYSIS-OPERATIONS-FUNCTIONS">
-
-            <img
-                src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/!!!_Numericalanalysis.jpg"
-                alt="Numerical Analysis"
-            >
-
-        </a>
-
-        <div class="project-title">
-            𝗡𝗨𝗠𝗘𝗥𝗜𝗖𝗔𝗟 𝗔𝗡𝗔𝗟𝗬𝗦𝗜𝗦
-        </div>
-
-    </div>
-
-
-    <div class="project">
-
-        <a href="https://github.com/Dreamerol/PROFIT-PREDICTOR">
-
-            <img
-                src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/ZZZZZZZZZZZZPROFIT7777.jpg"
-                alt="Profit Predictor"
-            >
-
-        </a>
-
-        <div class="project-title">
-            𝗣𝗥𝗢𝗙𝗜𝗧 𝗣𝗥𝗘𝗗𝗜𝗖𝗧𝗢𝗥
-        </div>
-
-    </div>
-
-
-    <div class="project">
-
-        <a href="https://github.com/Dreamerol/POLYNOMIAL-CALCULATOR-ALGORITHMS">
-
-            <img
-                src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/MATH4.JPG"
-                alt="Polynomial Calculator"
-            >
-
-        </a>
-
-        <div class="project-title">
-            𝗣𝗢𝗟𝗬𝗡𝗢𝗠𝗜𝗔𝗟 𝗖𝗔𝗟𝗖𝗨𝗟𝗔𝗧𝗢𝗥
-        </div>
-
-    </div>
-
-
-    <div class="project">
-
-        <a href="https://github.com/Dreamerol/BOOK-CATALOG-APP-DJANGO">
-
-            <img
-                src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/ZBOOKS.jpg"
-                alt="Django Catalog"
-            >
-
-        </a>
-
-        <div class="project-title">
-            𝗗𝗝𝗔𝗡𝗚𝗢 𝗖𝗔𝗧𝗔𝗟𝗢𝗚
-        </div>
-
-    </div>
-
-
-    <div class="project">
-
-        <a href="https://github.com/Dreamerol/PHYSICS-SIMULATION-SYSTEMS">
-
-            <img
-                src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/math777.jpg"
-                alt="Physics Simulation"
-            >
-
-        </a>
-
-        <div class="project-title">
-            𝗣𝗛𝗬𝗦𝗜𝗖𝗦 𝗦𝗜𝗠𝗨𝗟𝗔𝗧𝗜𝗢𝗡
-        </div>
-
-    </div>
-
-
-    <div class="project">
-
-        <a href="https://github.com/Dreamerol/DELIVERY-DATA-SQL-SYSTEM">
-
-            <img
-                src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/ZZZSQL777.JPG"
-                alt="Delivery SQL System"
-            >
-
-        </a>
-
-        <div class="project-title">
-            𝗗𝗘𝗟𝗜𝗩𝗘𝗥𝗬 𝗦𝗤𝗟 𝗦𝗬𝗦𝗧𝗘𝗠
-        </div>
-
-    </div>
-
-
-    <div class="project">
-
-        <a href="https://github.com/Dreamerol/PLACEBO-EFFECT">
-
-            <img
-                src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/PLACEBO777.JPG"
-                alt="Placebo Effect"
-            >
-
-        </a>
-
-        <div class="project-title">
-            𝗣𝗟𝗔𝗖𝗘𝗕𝗢 𝗘𝗙𝗙𝗘𝗖𝗧
-        </div>
-
-    </div>
-
-
-    <div class="project">
-
-        <a href="https://github.com/Dreamerol/MOODLE-LMS-PLATFORM">
-
-            <img
-                src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/ZZZZZEDU33.JPG"
-                alt="LMS Platform"
-            >
-
-        </a>
-
-        <div class="project-title">
-            𝗟𝗠𝗦 𝗣𝗟𝗔𝗧𝗙𝗢𝗥𝗠
-        </div>
-
-    </div>
-
-
-</div>
-
-</section>
-
-
-<div class="spacer-lg"></div>
-
-
-<!-- =========================================================
-     COMPUTER SCIENCE
-     ========================================================= -->
-
-<section class="container center">
-
-    <div class="title">
-
-        <a href="https://github.com/Dreamerol/CARDFOLIO">
-
-            👉 𝗖𝗢𝗠𝗣𝗨𝗧𝗘𝗥 𝗦𝗖𝗜𝗘𝗡𝗖𝗘
-            •
-            𝗙𝗨𝗡𝗗𝗔𝗠𝗘𝗡𝗧𝗔𝗟𝗦
-
-        </a>
-
-    </div>
-
-
-    <div class="subtitle">
-
-        𝗗𝗮𝘁𝗮 𝗦𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲𝘀
-        •
-        𝗔𝗹𝗴𝗼𝗿𝗶𝘁𝗵𝗺𝘀
-        •
-        𝗢𝗢𝗣
-        •
-        𝗦𝗤𝗟
-
-    </div>
-
-</section>
-
-
-<div class="spacer"></div>
-
-
-<!-- =========================================================
-     CARDFOLIO
-     ========================================================= -->
-
-<div class="container">
-
-    <a href="https://github.com/Dreamerol/CARDFOLIO">
-
+    <!-- CARDFOLIO -->
+    <a
+        class="image-link"
+        href="https://github.com/Dreamerol/CARDFOLIO"
+    >
         <img
-            class="full-image"
+            class="image"
             src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/MIHAELA-KOSEVA-CARDFOLIO.jpg"
-            alt="Mihaela Koseva CARDFOLIO"
+            alt="Mihaela Koseva Cardfolio"
         >
-
     </a>
 
-</div>
+
+    <div class="spacer"></div>
 
 
-<div class="spacer"></div>
-
-
-<section class="text-section container">
-
-    <b>
-        Mihaela Koseva (Михаела Косева)
-    </b>
-
-    •
-
-    Sofia University (Софийски университет)
-
-    •
-
-    СМГ
-
-    <br><br>
-
-    Building systems where
-    <strong>
-        data becomes structure, and structure becomes insight.
-    </strong>
-
-    A background in
-    <strong>
-        Mathematics, Algorithms, and Software Engineering
-    </strong>
-
-    with a focus on turning theory into practical, scalable systems.
-
-    <br><br>
-
-    Working with
-    <strong>
-        Python, SQL, Java, and Clojure
-    </strong>
-
-    to build
-    <strong>
-        data pipelines, backend systems, and machine learning models.
-    </strong>
-
-</section>
-
-
-<div class="spacer-lg"></div>
-
-
-<!-- =========================================================
-     STATS
-     ========================================================= -->
-
-<section class="container center">
-
-    <div class="title">
-
-        <a href="https://github.com/Dreamerol/ALLSTATS">
-
-            🔥 𝗗𝗘𝗩 𝗜𝗡𝗦𝗜𝗚𝗛𝗧𝗦
-            &
-            𝗚𝗜𝗧𝗛𝗨𝗕 𝗦𝗧𝗔𝗧𝗦 🔥
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<div class="spacer"></div>
-
-
-<div class="container">
-
-    <a href="https://github.com/Dreamerol/ALLSTATS">
-
+    <!-- TECH STACK / STATS -->
+    <a
+        class="image-link"
+        href="https://github.com/Dreamerol/ALLSTATS"
+    >
         <img
-            class="full-image"
+            class="image"
             src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/TECHSTACK-JPG.jpg"
             alt="Mihaela Koseva Tech Stack"
         >
-
     </a>
 
-</div>
+
+    <div class="spacer"></div>
 
 
-<div class="spacer"></div>
-
-
-<div class="container">
-
-    <a href="https://github.com/Dreamerol/ALLSTATS">
-
+    <!-- LANGUAGES -->
+    <a
+        class="image-link"
+        href="https://github.com/Dreamerol/ALLSTATS"
+    >
         <img
-            class="full-image"
+            class="image"
             src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/LANGUAGES777.jpg"
             alt="Mihaela Koseva Languages"
         >
-
     </a>
 
-</div>
+
+    <div class="spacer"></div>
 
 
-<div class="spacer-lg"></div>
-
-
-<!-- =========================================================
-     AI
-     ========================================================= -->
-
-<section class="container center">
-
-    <div class="title">
-
-        <a href="https://github.com/Dreamerol/SNN-NEURAL-ACTIVITY">
-
-            ⚛️ 𝗔𝗜 • 𝗗𝗔𝗧𝗔 •
-            𝗜𝗡𝗧𝗘𝗟𝗟𝗜𝗚𝗘𝗡𝗧 𝗦𝗬𝗦𝗧𝗘𝗠𝗦
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<div class="spacer"></div>
-
-
-<div class="container">
-
-    <a href="https://github.com/Dreamerol/SNN-NEURAL-ACTIVITY">
-
+    <!-- NEURAL NETWORKS / AI -->
+    <a
+        class="image-link"
+        href="https://github.com/Dreamerol/SNN-NEURAL-ACTIVITY"
+    >
         <img
-            class="full-image"
+            class="image"
             src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/NN_23.JPG"
-            alt="Mihaela Koseva AI Data Intelligent Systems"
+            alt="Mihaela Koseva AI Neural Networks"
         >
-
     </a>
 
-</div>
+
+    <div class="spacer"></div>
 
 
-<div class="spacer-lg"></div>
-
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
-
-<section class="container">
-
-    <div class="footer-title">
-
-        ⭐ Explore repos & star what you find interesting.
-
-    </div>
-
-
-    <div class="footer-text">
-
-        Mihaela Koseva (Михаела Косева) •
-        Sofia University (Софийски университет) •
-        SMG (СМГ) •
-        Sofia •
-        AI Engineer •
-        Software Engineer •
-        Backend •
-        Data Systems & APIs •
-        Applied Machine Learning •
-        Neural Networks •
-        Model Training •
-        Data Science •
-        LLMs •
-        Python •
-        C++ •
-        Java •
-        SQL •
-        PyTorch •
-        TensorFlow •
-        Scikit-learn •
-        Pandas •
-        NumPy •
-        ETL •
-        Data Modeling •
-        MLOps •
-        Git •
-        GitHub: Dreamerol
-
-    </div>
-
-
-    <div class="footer-text footer-muted">
-
-        © 2026 Mihaela Koseva (Михаела Косева) •
-        Софийски университет •
-        Original portfolio design.
-
-    </div>
-
-
-    <div class="footer-text footer-muted">
-
-        🔗 Explore on GitHub:
-
-        <a href="https://github.com/Dreamerol">
-
-            Mihaela Koseva (Михаела Косева) •
-            Software Engineer •
-            AI •
-            ML •
-            Dreamerol
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<div class="spacer-lg"></div>
-
-
-<!-- =========================================================
-     PORTFOLIO
-     ========================================================= -->
-
-<div class="container">
-
-    <a href="https://github.com/Dreamerol/PORTFOLIO">
-
-        <img
-            class="full-image"
-            src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/PORTFOLIO_1.jpg"
-            loading="lazy"
-            alt="Mihaela Koseva Portfolio"
-            style="border-radius:18px;"
-        >
-
-    </a>
-
-</div>
-
-
-<div class="spacer"></div>
-
-
-<!-- =========================================================
-     BUTTONS
-     ========================================================= -->
-
-<div class="buttons">
-
-
+    <!-- PORTFOLIO -->
     <a
-        href="https://www.linkedin.com/in/mihaela-koseva-software-engineer"
-        target="_blank"
-    >
-
-        <img
-            src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/Butoni%20LINKEDIN.png"
-            alt="LinkedIn"
-        >
-
-    </a>
-
-
-    <a
+        class="image-link"
         href="https://github.com/Dreamerol/PORTFOLIO"
-        target="_blank"
     >
-
         <img
-            src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/Butoni%20PORTFOLIO.png"
-            alt="Portfolio"
+            class="image"
+            src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/PORTFOLIO_1.jpg"
+            alt="Mihaela Koseva Portfolio"
         >
-
     </a>
-
-
-    <a
-        href="https://github.com/Dreamerol/CARDFOLIO"
-        target="_blank"
-    >
-
-        <img
-            src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/Butoni%20REPOSITORIES.png"
-            alt="Repositories"
-        >
-
-    </a>
-
-
-    <a
-        href="https://github.com/Dreamerol/ALLSTATS"
-        target="_blank"
-    >
-
-        <img
-            src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/Butoni%20STATS.png"
-            alt="Stats"
-        >
-
-    </a>
-
-
-    <a
-        href="https://github.com/Dreamerol/RESUME"
-        target="_blank"
-    >
-
-        <img
-            src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/Butoni%20RESUME.png"
-            alt="Resume"
-        >
-
-    </a>
-
 
 </div>
-
-
-<div class="spacer"></div>
-
 
 </body>
 </html>
