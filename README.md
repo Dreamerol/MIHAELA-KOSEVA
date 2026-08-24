@@ -16,7 +16,7 @@
 
 <a href="https://www.linkedin.com/in/mihaela-koseva-software-engineer/">
   <img 
-    src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/MIHAELA-KOSEVA.png"
+    src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/Mihaela-Koseva-Baner.png"
     width="100%"
     alt="Mihaela Koseva (Михаела Косева), Sofia University (Софийски университет), SMG (СМГ), Software Engineering, AI Engineer, Applied Machine Learning, Data Science, Software Engineer, Backend Engineer, REST APIs, Python, C++, Java, SQL, Mihaela Koseva (Михаела Косева), Sofia University (Софийски университет), SMG (СМГ)" />
 </a>
