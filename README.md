@@ -1,7 +1,11 @@
 
 
 
+<div align="center">
 
+# <a href="https://github.com/Dreamerol/ALLSTATS" title="Mihaela Koseva • Software Engineer • Data • Applied AI/ML • Python • C++ • Java • SQL">𝗠𝗜𝗛𝗔𝗘𝗟𝗔 𝗞𝗢𝗦𝗘𝗩𝗔 • 𝗦𝗪𝗘 ∫ 𝗗𝗔𝗧𝗔 &amp; 𝗔𝗣𝗣𝗟𝗜𝗘𝗗 𝗔𝗜/𝗠𝗟</a>
+
+</div>
 
 
 
