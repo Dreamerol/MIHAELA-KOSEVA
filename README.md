@@ -1,11 +1,3 @@
-# mihaelakoseva.io
-
-
-
-
-
-
-
 
 
 <div align="center">
