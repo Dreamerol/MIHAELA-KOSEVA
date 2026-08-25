@@ -1,6 +1,11 @@
 
 
 
+
+
+
+
+
 <div align="center">
 
 <h1 title="Mihaela Koseva (Михаела Косева) • Sofia University (Софийски университет) • SMG (СМГ) • Sofia • GitHub: Dreamerol • github.com/Dreamerol • AI Engineer • Applied Machine Learning • Data Science • Python • C++ • Java • SQL">
