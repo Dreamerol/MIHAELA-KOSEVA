@@ -4,12 +4,6 @@
 
 
 
-<br>
-
-
-
-
-
 
 
 <div align="center">
@@ -52,20 +46,15 @@ width="320" height="220">
 
 
 
+
+
+
+
 <br><br><br>
 
 
 
 
-
-
-
-
-
-
-
-<table align="center" cellspacing="0" cellpadding="2">
-<tr>
 
 
 
@@ -138,12 +127,6 @@ alt="Mihaela Koseva (Михаела Косева) • Sofia University (Софи
 </tr>
 </table>
 
-
-
-
-
-
-<br><br><br><br><br>
 
 
 
