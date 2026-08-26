@@ -284,8 +284,6 @@ alt="Mihaela Koseva (Михаела Косева) • Sofia University (Софи
 
 
 
-
-
 <td>
 <a href="https://github.com/Dreamerol/CARDFOLIO" target="_blank">
 <img src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/WEBSITE-REPOSITORIES.png" height="130"
@@ -310,8 +308,6 @@ alt="Mihaela Koseva (Михаела Косева) • Sofia University (Софи
 alt="Mihaela Koseva (Михаела Косева) • Sofia University (Софийски университет) • SMG (СМГ) • Sofia • Software Engineering • AI Engineer • Applied Machine Learning • Data Science • Python • C++ • Java • SQL">
 </a>
 </td>
-
-
 
 
 
