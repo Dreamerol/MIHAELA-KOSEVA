@@ -72,25 +72,33 @@
 
 <tr>
 
-<td align="center" width="360">
-<a href="https://github.com/Dreamerol/NEURAL-NETWORKS">
-<img src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/ZZZZZZZZZNNNNN777.jpg"
-width="320" height="220">
-</a>
-<br><b>𝗡𝗘𝗨𝗥𝗔𝗟 𝗡𝗘𝗧𝗪𝗢𝗥𝗞𝗦</b>
-</td>
+
 
 <td align="center" width="360">
 <a href="https://github.com/Dreamerol/PROFIT-PREDICTOR-ML">
-<img src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/ZZZZZZZZZZZZPROFIT7777.jpg"
+<img src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/1-Mihaela%20Koseva%20-%20Site%20-Profit%20Predictor.png"
 width="320" height="220">
 </a>
 <br><b>𝗣𝗥𝗢𝗙𝗜𝗧 𝗣𝗥𝗘𝗗𝗜𝗖𝗧𝗢𝗥</b>
 </td>
 
+
+
+
+
+<td align="center" width="360">
+<a href="https://github.com/Dreamerol/NEURAL-NETWORKS">
+<img src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/2-Mihaela%20Koseva%20-%20Site%20-%20Neural%20Networks.png"
+width="320" height="220">
+</a>
+<br><b>𝗡𝗘𝗨𝗥𝗔𝗟 𝗡𝗘𝗧𝗪𝗢𝗥𝗞𝗦</b>
+</td>
+
+
+
 <td align="center" width="360">
 <a href="https://github.com/Dreamerol/PLACEBO-EFFECT-ML-DATA-ANALYSIS">
-<img src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/PLACEBO777.JPG"
+<img src="https://raw.githubusercontent.com/Dreamerol/Dreamerol/main/3-Mihaela%20Koseva%20-%20Site%20-%20ML%20-%20Data%20Analysis.png"
 width="320" height="220">
 </a>
 <br><b>𝗠𝗟 𝗗𝗔𝗧𝗔 𝗔𝗡𝗔𝗟𝗬𝗦𝗜𝗦</b>
@@ -99,6 +107,15 @@ width="320" height="220">
 </tr>
 
 </table>
+
+
+
+
+
+
+
+
+
 
 
 
