@@ -9,9 +9,18 @@
     content="Mihaela Koseva — Software Engineer focused on Data, Applied AI and Machine Learning."
   >
 
+  <meta name="author" content="Mihaela Koseva">
   <meta name="theme-color" content="#171717">
 
   <title>Mihaela Koseva — Software Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -22,84 +31,197 @@
 
     <!-- HERO -->
     <section class="hero" id="top">
-
       <img
-        class="hero-banner"
-        src="assets/images/hero-banner.png"
+        src="assets/hero-banner.png"
         alt="Mihaela Koseva — Software Engineer"
+        class="hero-banner"
       >
+    </section>
 
-      <!-- 5 MAIN BUTTONS -->
-      <nav class="main-buttons" aria-label="Main navigation">
 
+    <!-- PROJECTS -->
+    <section class="projects" aria-labelledby="projects-title">
+
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2 id="projects-title">Projects</h2>
+      </div>
+
+      <div class="project-grid">
+
+        <!-- PROJECT 01 -->
         <a
-          href="https://www.linkedin.com/in/mihaela-koseva-software-engineer"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="assets/images/button-linkedin.png"
-            alt="LinkedIn"
-          >
-        </a>
-
-        <a
-          href="https://github.com/Dreamerol"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="assets/images/button-github.png"
-            alt="GitHub"
-          >
-        </a>
-
-        <a
+          class="project-card light"
           href="https://github.com/Dreamerol/PORTFOLIO"
           target="_blank"
           rel="noopener"
         >
-          <img
-            src="assets/images/button-portfolio.png"
-            alt="Portfolio"
-          >
+          <div class="project-image">
+            <img
+              src="assets/project-data.jpg"
+              alt="Data project visual"
+            >
+          </div>
+
+          <div class="project-meta">
+            <span>01</span>
+            <span>DATA</span>
+          </div>
+
+          <h3>Data-driven systems</h3>
+
+          <p>
+            Exploration, modeling and practical software built around meaningful data.
+          </p>
         </a>
 
+
+        <!-- PROJECT 02 -->
         <a
+          class="project-card dark"
           href="https://github.com/Dreamerol/CARDFOLIO"
           target="_blank"
           rel="noopener"
         >
-          <img
-            src="assets/images/button-repositories.png"
-            alt="Repositories"
-          >
+          <div class="project-image">
+            <img
+              src="assets/project-ai.jpg"
+              alt="Applied AI project visual"
+            >
+          </div>
+
+          <div class="project-meta">
+            <span>02</span>
+            <span>APPLIED AI</span>
+          </div>
+
+          <h3>Intelligent systems</h3>
+
+          <p>
+            Machine learning concepts translated into focused, usable software.
+          </p>
         </a>
 
+
+        <!-- PROJECT 03 -->
         <a
+          class="project-card light"
           href="https://github.com/Dreamerol/ALLSTATS"
           target="_blank"
           rel="noopener"
         >
-          <img
-            src="assets/images/button-stats.png"
-            alt="Stats"
-          >
+          <div class="project-image">
+            <img
+              src="assets/project-placebo.jpg"
+              alt="Research project visual"
+            >
+          </div>
+
+          <div class="project-meta">
+            <span>03</span>
+            <span>RESEARCH</span>
+          </div>
+
+          <h3>Evidence &amp; impact</h3>
+
+          <p>
+            Technical thinking where software, data and real-world questions meet.
+          </p>
         </a>
 
-      </nav>
+      </div>
+
+    </section>
+
+
+    <!-- FIVE BUTTONS -->
+    <!-- WHITE - BLACK - WHITE - BLACK - WHITE -->
+
+    <section class="navigation" aria-label="Explore">
+
+      <!-- 01 — WHITE -->
+      <a
+        href="https://www.linkedin.com/in/mihaela-koseva-software-engineer"
+        target="_blank"
+        rel="noopener"
+        class="nav-card light"
+      >
+        <img
+          src="assets/button-linkedin.png"
+          alt="Mihaela Koseva — LinkedIn"
+        >
+      </a>
+
+
+      <!-- 02 — BLACK -->
+      <a
+        href="https://github.com/Dreamerol"
+        target="_blank"
+        rel="noopener"
+        class="nav-card dark"
+      >
+        <img
+          src="assets/button-github.png"
+          alt="Mihaela Koseva — GitHub"
+        >
+      </a>
+
+
+      <!-- 03 — WHITE -->
+      <a
+        href="https://github.com/Dreamerol/PORTFOLIO"
+        target="_blank"
+        rel="noopener"
+        class="nav-card light"
+      >
+        <img
+          src="assets/button-portfolio.png"
+          alt="Mihaela Koseva — Portfolio"
+        >
+      </a>
+
+
+      <!-- 04 — BLACK -->
+      <a
+        href="https://github.com/Dreamerol/CARDFOLIO"
+        target="_blank"
+        rel="noopener"
+        class="nav-card dark"
+      >
+        <img
+          src="assets/button-repositories.png"
+          alt="Mihaela Koseva — Repositories"
+        >
+      </a>
+
+
+      <!-- 05 — WHITE -->
+      <a
+        href="https://github.com/Dreamerol/ALLSTATS"
+        target="_blank"
+        rel="noopener"
+        class="nav-card light"
+      >
+        <img
+          src="assets/button-stats.png"
+          alt="Mihaela Koseva — GitHub Stats"
+        >
+      </a>
 
     </section>
 
   </main>
 
 
-  <!-- 3 CONTACT BUTTONS -->
-  <footer class="footer" aria-label="Contact links">
+  <!-- CONTACT -->
+  <footer class="footer">
 
-    <a href="mailto:michaelakoseva@gmail.com">
+    <a
+      href="mailto:michaelakoseva@gmail.com"
+      aria-label="Email Mihaela Koseva"
+    >
       <img
-        src="assets/images/contact-email.png"
+        src="assets/contact-email.png"
         alt="Email"
       >
     </a>
@@ -108,9 +230,10 @@
       href="https://www.linkedin.com/in/mihaela-koseva-software-engineer"
       target="_blank"
       rel="noopener"
+      aria-label="LinkedIn"
     >
       <img
-        src="assets/images/contact-linkedin.png"
+        src="assets/contact-linkedin.png"
         alt="LinkedIn"
       >
     </a>
@@ -119,9 +242,10 @@
       href="https://github.com/Dreamerol"
       target="_blank"
       rel="noopener"
+      aria-label="GitHub"
     >
       <img
-        src="assets/images/contact-github.png"
+        src="assets/contact-github.png"
         alt="GitHub"
       >
     </a>
