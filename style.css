@@ -1,225 +1,172 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: #171717;
-  color: #f4f0e9;
-  font-family: Arial, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-
-/* ==============================
-   HERO
-   ============================== */
-
-.hero {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #171717;
-}
-
-.hero-banner {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-
-
-/* ==============================
-   FIVE MAIN BUTTONS
-   ============================== */
-
-.navigation {
-  width: 100%;
-  margin: -90px 0 0;
-  padding: 0;
-
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-
-  justify-content: center !important;
-  align-items: flex-start !important;
-
-  gap: 22px;
-
-  position: relative;
-  z-index: 20;
-}
-
-.navigation .nav-card {
-  display: block !important;
-
-  flex: 0 0 auto !important;
-
-  width: 15vw !important;
-  max-width: none !important;
-
-  margin: 0 !important;
-  padding: 0 !important;
-
-  line-height: 0;
-
-  cursor: pointer;
-
-  position: relative;
-
-  transition:
-    transform 0.18s ease,
-    filter 0.18s ease;
-}
-
-.navigation .nav-card img {
-  display: block;
-
-  width: 100% !important;
-  height: auto !important;
-
-  margin: 0;
-  padding: 0;
-
-  pointer-events: none;
-}
-
-
-/* HOVER */
-
-.navigation .nav-card:hover {
-  transform: translateY(-5px);
-  filter: brightness(1.06);
-}
-
-
-/* CLICK */
-
-.navigation .nav-card:active {
-  transform: translateY(7px) scale(0.96);
-  filter: brightness(0.93);
-}
-
-
-/* ==============================
-   CONTACT BUTTONS
-   ============================== */
-
-.footer {
-  width: 100%;
-  margin: 45px 0 0;
-  padding: 35px 20px 50px;
-
-  background: #171717;
-
-  border-top: 1px solid rgba(173, 135, 80, 0.5);
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-
-  justify-content: center;
-  align-items: center;
-
-  gap: 45px;
-}
-
-.footer a {
-  display: block;
-
-  flex: 0 0 auto;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.18s ease,
-    filter 0.18s ease;
-}
-
-.footer a:hover {
-  transform: translateY(-5px);
-  filter: brightness(1.08);
-}
-
-.footer a:active {
-  transform: translateY(6px) scale(0.95);
-  filter: brightness(0.94);
-}
-
-.footer img {
-  display: block;
-
-  width: auto;
-  height: 90px;
-
-  max-width: none;
-
-  margin: 0;
-  padding: 0;
-
-  pointer-events: none;
-}
-
-
-/* ==============================
-   TABLET
-   ============================== */
-
-@media (max-width: 900px) {
-
-  .navigation {
-    margin-top: -70px;
-    gap: 12px;
-  }
-
-  .navigation .nav-card {
-    width: 16vw !important;
-  }
-
-  .footer {
-    gap: 28px;
-  }
-
-  .footer img {
-    height: 75px;
-  }
-}
-
-
-/* ==============================
-   MOBILE
-   ============================== */
-
-@media (max-width: 600px) {
-
-  .navigation {
-    margin-top: -40px;
-    gap: 6px;
-  }
-
-  .navigation .nav-card {
-    width: 18vw !important;
-  }
-
-  .footer {
-    gap: 14px;
-    margin-top: 30px;
-    padding: 30px 10px 40px;
-  }
-
-  .footer img {
-    height: 60px;
-  }
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Mihaela Koseva — Software Engineer focused on Data, Applied AI and Machine Learning."
+  >
+
+  <meta name="author" content="Mihaela Koseva">
+  <meta name="theme-color" content="#171717">
+
+  <title>Mihaela Koseva — Software Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <img
+        src="assets/hero-banner.png"
+        alt="Mihaela Koseva — Software Engineer"
+        class="hero-banner"
+      >
+    </section>
+
+
+    <!-- FIVE MAIN BUTTONS -->
+
+    <section class="navigation" aria-label="Explore">
+
+      <table class="button-table">
+        <tr>
+
+          <td>
+            <a
+              href="https://www.linkedin.com/in/mihaela-koseva-software-engineer"
+              target="_blank"
+              rel="noopener"
+              class="main-button"
+            >
+              <img
+                src="assets/button-linkedin.png"
+                alt="LinkedIn"
+              >
+            </a>
+          </td>
+
+          <td>
+            <a
+              href="https://github.com/Dreamerol"
+              target="_blank"
+              rel="noopener"
+              class="main-button"
+            >
+              <img
+                src="assets/button-github.png"
+                alt="GitHub"
+              >
+            </a>
+          </td>
+
+          <td>
+            <a
+              href="https://github.com/Dreamerol/PORTFOLIO"
+              target="_blank"
+              rel="noopener"
+              class="main-button"
+            >
+              <img
+                src="assets/button-portfolio.png"
+                alt="Portfolio"
+              >
+            </a>
+          </td>
+
+          <td>
+            <a
+              href="https://github.com/Dreamerol/CARDFOLIO"
+              target="_blank"
+              rel="noopener"
+              class="main-button"
+            >
+              <img
+                src="assets/button-repositories.png"
+                alt="Repositories"
+              >
+            </a>
+          </td>
+
+          <td>
+            <a
+              href="https://github.com/Dreamerol/ALLSTATS"
+              target="_blank"
+              rel="noopener"
+              class="main-button"
+            >
+              <img
+                src="assets/button-stats.png"
+                alt="Stats"
+              >
+            </a>
+          </td>
+
+        </tr>
+      </table>
+
+    </section>
+
+  </main>
+
+
+  <!-- CONTACTS -->
+
+  <footer class="footer">
+
+    <a
+      href="mailto:michaelakoseva@gmail.com"
+      aria-label="Email"
+      class="contact-button"
+    >
+      <img
+        src="assets/contact-email.png"
+        alt="Email"
+      >
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/mihaela-koseva-software-engineer"
+      target="_blank"
+      rel="noopener"
+      aria-label="LinkedIn"
+      class="contact-button"
+    >
+      <img
+        src="assets/contact-linkedin.png"
+        alt="LinkedIn"
+      >
+    </a>
+
+    <a
+      href="https://github.com/Dreamerol"
+      target="_blank"
+      rel="noopener"
+      aria-label="GitHub"
+      class="contact-button"
+    >
+      <img
+        src="assets/contact-github.png"
+        alt="GitHub"
+      >
+    </a>
+
+  </footer>
+
+</body>
+</html>
