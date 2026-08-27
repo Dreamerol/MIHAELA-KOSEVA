@@ -1,267 +1,128 @@
-* {
-    box-sizing: border-box;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#171717;color:#f4f0e9;font-family:Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+
+.hero{
+    position:relative;
+    width:100%;
+    padding-bottom:275px;
+    background:#171717
 }
 
-html {
-    scroll-behavior: smooth;
+.hero-banner{
+    display:block;
+    width:100%;
+    height:auto;
+    max-width:none
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background: #171717;
-    color: #f4f0e9;
-    font-family: Arial, sans-serif;
+.main-buttons{
+    position:absolute;
+    left:3%;
+    right:3%;
+    bottom:0;
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:40px;
+    align-items:start
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+.main-buttons a{
+    display:block;
+    transition:transform .25s ease,filter .25s ease
 }
 
-
-/* =========================================
-   HERO / BANNER
-   ========================================= */
-
-.hero {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background: #171717;
+.main-buttons a:hover{
+    transform:translateY(-15px);
+    filter:brightness(1.04)
 }
 
-.hero-banner {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: none;
-    margin: 0;
-    padding: 0;
+.main-buttons img{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:230/205
 }
 
-
-/* =========================================
-   FIVE NAVIGATION BUTTONS
-   ========================================= */
-
-.navigation {
-    position: relative;
-
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-
-    /*
-       1.8% space between buttons
-    */
-    gap: 1.8vw;
-
-    /*
-       Move the buttons upward so their
-       bottom edge meets the bottom edge
-       of the banner.
-    */
-    margin-top: -13.37vw;
-
-    z-index: 10;
+.footer{
+    min-height:275px;
+    background:#171717;
+    border-top:1px solid rgba(173,135,80,.5);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:95px;
+    padding:45px 60px 65px
 }
 
-
-/* =========================================
-   INDIVIDUAL BUTTON
-   ========================================= */
-
-.navigation .nav-card {
-    display: block;
-
-    /*
-       EXACTLY 15% OF PAGE/BANNER WIDTH
-    */
-    width: 15vw;
-    flex: 0 0 15vw;
-
-    margin: 0;
-    padding: 0;
-
-    line-height: 0;
-    cursor: pointer;
-
-    transition:
-        transform 0.25s ease,
-        filter 0.25s ease;
+.footer a{
+    display:block;
+    transition:transform .25s ease,filter .25s ease
 }
 
-
-/* =========================================
-   BUTTON IMAGE
-   ========================================= */
-
-.navigation .nav-card img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: none;
-
-    margin: 0;
-    padding: 0;
+.footer a:hover{
+    transform:translateY(-8px);
+    filter:brightness(1.08)
 }
 
-
-/* =========================================
-   HOVER / BOUNCE
-   ========================================= */
-
-.navigation .nav-card:hover {
-    transform: translateY(-6px);
-    filter: brightness(1.04);
+.footer img{
+    display:block;
+    width:auto;
+    height:143px;
+    max-width:100%
 }
 
-
-/* =========================================
-   FOOTER
-   ========================================= */
-
-.footer {
-    width: 100%;
-    min-height: 110px;
-
-    margin: 0;
-    padding: 18px 24px 26px;
-
-    background: #171717;
-
-    border-top: 1px solid rgba(173, 135, 80, 0.5);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 38px;
-}
-
-
-/* =========================================
-   CONTACT BUTTONS
-   ========================================= */
-
-.footer a {
-    display: block;
-
-    margin: 0;
-    padding: 0;
-
-    transition:
-        transform 0.25s ease,
-        filter 0.25s ease;
-}
-
-.footer a:hover {
-    transform: translateY(-3px);
-    filter: brightness(1.08);
-}
-
-
-/* =========================================
-   CONTACT IMAGES
-   ========================================= */
-
-.footer img {
-    display: block;
-
-    width: auto;
-    height: 57px;
-    max-width: 100%;
-
-    margin: 0;
-    padding: 0;
-}
-
-
-/* =========================================
-   TABLET
-   ========================================= */
-
-@media (max-width: 800px) {
-
-    .navigation {
-        position: relative;
-
-        width: auto;
-
-        display: grid;
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 12px;
-
-        margin: 10px 20px 0;
+@media(max-width:800px){
+    .hero{
+        padding-bottom:0
     }
 
-    .navigation .nav-card {
-        width: 100%;
-        flex: none;
+    .main-buttons{
+        position:relative;
+        left:auto;
+        right:auto;
+        bottom:auto;
+        margin:0 20px;
+        padding-top:25px;
+        grid-template-columns:repeat(2,1fr);
+        gap:30px
     }
 
-    .navigation .nav-card:last-child {
-        grid-column: 1 / -1;
-
-        width: calc(50% - 6px);
-
-        justify-self: center;
+    .main-buttons a:last-child{
+        grid-column:1/-1;
+        justify-self:center;
+        width:calc(50% - 15px)
     }
 
-    .footer {
-        gap: 10px;
-        flex-wrap: wrap;
+    .footer{
+        gap:25px;
+        flex-wrap:wrap
     }
 
-    .footer img {
-        height: 48px;
+    .footer img{
+        height:120px
     }
 }
 
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 480px) {
-
-    .navigation {
-        grid-template-columns: 1fr;
-
-        margin: 10px 12px 0;
-
-        gap: 10px;
+@media(max-width:480px){
+    .main-buttons{
+        margin:0 12px;
+        grid-template-columns:1fr;
+        gap:30px
     }
 
-    .navigation .nav-card,
-    .navigation .nav-card:last-child {
-        grid-column: auto;
-
-        width: 100%;
-
-        justify-self: stretch;
+    .main-buttons a:last-child{
+        grid-column:auto;
+        width:auto
     }
 
-    .footer {
-        min-height: 95px;
-
-        padding: 14px;
-
-        gap: 8px;
+    .footer{
+        min-height:238px;
+        padding:35px
     }
 
-    .footer img {
-        height: 42px;
+    .footer img{
+        height:105px
     }
 }
