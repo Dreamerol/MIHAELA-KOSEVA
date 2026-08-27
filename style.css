@@ -18,10 +18,12 @@ a {
   text-decoration: none;
 }
 
+/* =========================
+   HERO
+   ========================= */
+
 .hero {
-  position: relative;
   width: 100%;
-  padding-bottom: 110px;
   background: #171717;
 }
 
@@ -29,45 +31,81 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  max-width: none;
 }
 
-.main-buttons {
-  position: absolute;
-  left: 9.7%;
-  right: 9.7%;
-  bottom: 0;
 
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px;
-  align-items: start;
+/* =========================
+   FIVE MAIN BUTTONS
+   ========================= */
+
+.navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
 }
 
-.main-buttons a {
+.navigation .nav-card {
   display: block;
+
+  width: min(720px, 90vw);
+
+  margin: 0 auto;
+  padding: 0;
+
+  line-height: 0;
+
+  cursor: pointer;
+
   transition:
-    transform .25s ease,
-    filter .25s ease;
+    transform 0.25s ease,
+    filter 0.25s ease;
 }
 
-.main-buttons a:hover {
+.navigation .nav-card:hover {
   transform: translateY(-6px);
-  filter: brightness(1.04);
+  filter: brightness(1.06);
 }
 
-.main-buttons img {
+.navigation .nav-card img {
   display: block;
+
   width: 100%;
   height: auto;
-  aspect-ratio: 230 / 205;
+
+  margin: 0;
+  padding: 0;
 }
 
+
+/* =========================
+   WHITE / BLACK
+   ========================= */
+
+.navigation .light {
+  background: #f4f0e9;
+}
+
+.navigation .dark {
+  background: #171717;
+}
+
+
+/* =========================
+   CONTACTS
+   ========================= */
+
 .footer {
-  min-height: 110px;
+  width: 100%;
+
+  min-height: 150px;
+
   background: #171717;
 
-  border-top: 1px solid rgba(173, 135, 80, .5);
+  border-top: 1px solid rgba(173, 135, 80, 0.5);
 
   display: flex;
   align-items: center;
@@ -75,89 +113,78 @@ a {
 
   gap: 38px;
 
-  padding: 18px 24px 26px;
+  padding: 35px 24px 40px;
 }
 
 .footer a {
   display: block;
 
+  cursor: pointer;
+
   transition:
-    transform .25s ease,
-    filter .25s ease;
+    transform 0.25s ease,
+    filter 0.25s ease;
 }
 
 .footer a:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   filter: brightness(1.08);
 }
 
 .footer img {
   display: block;
+
   width: auto;
-  height: 57px;
+  height: 75px;
+
   max-width: 100%;
 }
 
 
-/* TABLET / MOBILE */
+/* =========================
+   TABLET
+   ========================= */
 
 @media (max-width: 800px) {
 
-  .hero {
-    padding-bottom: 0;
-  }
-
-  .main-buttons {
-    position: relative;
-
-    left: auto;
-    right: auto;
-    bottom: auto;
-
-    margin: 0 20px;
-    padding-top: 10px;
-
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-
-  .main-buttons a:last-child {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: calc(50% - 6px);
+  .navigation .nav-card {
+    width: 92vw;
   }
 
   .footer {
-    gap: 10px;
-    flex-wrap: wrap;
+    gap: 22px;
+    padding: 30px 20px 35px;
   }
 
   .footer img {
-    height: 48px;
+    height: 65px;
   }
 }
 
 
-/* SMALL MOBILE */
+/* =========================
+   MOBILE
+   ========================= */
 
 @media (max-width: 480px) {
 
-  .main-buttons {
-    margin: 0 12px;
-    grid-template-columns: 1fr;
+  .navigation .nav-card {
+    width: 94vw;
   }
 
-  .main-buttons a:last-child {
-    grid-column: auto;
-    width: auto;
+  .navigation .nav-card:hover {
+    transform: none;
   }
 
   .footer {
-    min-height: 95px;
-    padding: 14px;
+    min-height: 120px;
+
+    gap: 12px;
+
+    padding: 25px 12px 30px;
   }
 
   .footer img {
-    height: 42px;
+    height: 52px;
   }
 }
