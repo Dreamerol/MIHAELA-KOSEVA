@@ -4,7 +4,6 @@
 
 html {
     scroll-behavior: smooth;
-    width: 100%;
 }
 
 body {
@@ -14,12 +13,6 @@ body {
     background: #171717;
     color: #f4f0e9;
     font-family: Arial, sans-serif;
-}
-
-main {
-    width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 a {
@@ -36,7 +29,7 @@ a {
     position: relative;
     width: 100%;
     margin: 0;
-    padding-bottom: 110px;
+    padding: 0;
     background: #171717;
 }
 
@@ -51,72 +44,85 @@ a {
 
 
 /* =========================================
-   FIVE MAIN BUTTONS
+   FIVE NAVIGATION BUTTONS
    ========================================= */
 
-.main-buttons {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 110px;
+.navigation {
+    position: relative;
 
     width: 100%;
+    margin: 0;
+    padding: 0;
 
     display: flex;
     justify-content: center;
     align-items: flex-end;
 
-    gap: 1.8%;
+    /*
+       1.8% space between buttons
+    */
+    gap: 1.8vw;
+
+    /*
+       Move the buttons upward so their
+       bottom edge meets the bottom edge
+       of the banner.
+    */
+    margin-top: -13.37vw;
+
+    z-index: 10;
 }
 
+
 /* =========================================
-   MAIN BUTTONS
+   INDIVIDUAL BUTTON
    ========================================= */
 
-.main-buttons a {
+.navigation .nav-card {
     display: block;
 
     /*
-     * Each button = 15% of banner width
-     */
-    width: 15%;
-    flex: 0 0 15%;
+       EXACTLY 15% OF PAGE/BANNER WIDTH
+    */
+    width: 15vw;
+    flex: 0 0 15vw;
 
     margin: 0;
     padding: 0;
 
     line-height: 0;
+    cursor: pointer;
 
     transition:
-        transform .25s ease,
-        filter .25s ease;
+        transform 0.25s ease,
+        filter 0.25s ease;
 }
 
 
 /* =========================================
-   BUTTON HOVER / BOUNCE
+   BUTTON IMAGE
    ========================================= */
 
-.main-buttons a:hover {
-    transform: translateY(-6px);
-    filter: brightness(1.04);
-}
-
-
-/* =========================================
-   BUTTON IMAGES
-   ========================================= */
-
-.main-buttons img {
+.navigation .nav-card img {
     display: block;
 
     width: 100%;
     height: auto;
 
+    max-width: none;
+
     margin: 0;
     padding: 0;
+}
 
-    aspect-ratio: 230 / 205;
+
+/* =========================================
+   HOVER / BOUNCE
+   ========================================= */
+
+.navigation .nav-card:hover {
+    transform: translateY(-6px);
+    filter: brightness(1.04);
 }
 
 
@@ -125,32 +131,37 @@ a {
    ========================================= */
 
 .footer {
+    width: 100%;
     min-height: 110px;
+
+    margin: 0;
+    padding: 18px 24px 26px;
 
     background: #171717;
 
-    border-top: 1px solid rgba(173, 135, 80, .5);
+    border-top: 1px solid rgba(173, 135, 80, 0.5);
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     gap: 38px;
-
-    padding: 18px 24px 26px;
 }
 
 
 /* =========================================
-   FOOTER LINKS
+   CONTACT BUTTONS
    ========================================= */
 
 .footer a {
     display: block;
 
+    margin: 0;
+    padding: 0;
+
     transition:
-        transform .25s ease,
-        filter .25s ease;
+        transform 0.25s ease,
+        filter 0.25s ease;
 }
 
 .footer a:hover {
@@ -160,7 +171,7 @@ a {
 
 
 /* =========================================
-   FOOTER IMAGES
+   CONTACT IMAGES
    ========================================= */
 
 .footer img {
@@ -169,6 +180,9 @@ a {
     width: auto;
     height: 57px;
     max-width: 100%;
+
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -178,40 +192,31 @@ a {
 
 @media (max-width: 800px) {
 
-    .hero {
-        padding-bottom: 0;
-    }
-
-    .main-buttons {
+    .navigation {
         position: relative;
-
-        left: auto;
-        right: auto;
-        bottom: auto;
 
         width: auto;
 
-        margin: 0 20px;
-        padding-top: 10px;
-
         display: grid;
 
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
         gap: 12px;
+
+        margin: 10px 20px 0;
     }
 
-    .main-buttons a {
+    .navigation .nav-card {
         width: 100%;
         flex: none;
     }
 
-    .main-buttons a:last-child {
+    .navigation .nav-card:last-child {
         grid-column: 1 / -1;
 
-        justify-self: center;
-
         width: calc(50% - 6px);
+
+        justify-self: center;
     }
 
     .footer {
@@ -231,27 +236,29 @@ a {
 
 @media (max-width: 480px) {
 
-    .main-buttons {
-        margin: 0 12px;
-        padding-top: 10px;
-
+    .navigation {
         grid-template-columns: 1fr;
+
+        margin: 10px 12px 0;
 
         gap: 10px;
     }
 
-    .main-buttons a {
-        width: 100%;
-    }
-
-    .main-buttons a:last-child {
+    .navigation .nav-card,
+    .navigation .nav-card:last-child {
         grid-column: auto;
+
         width: 100%;
+
+        justify-self: stretch;
     }
 
     .footer {
         min-height: 95px;
+
         padding: 14px;
+
+        gap: 8px;
     }
 
     .footer img {
