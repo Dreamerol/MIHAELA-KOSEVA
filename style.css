@@ -13,7 +13,11 @@ a{
     text-decoration:none
 }
 
-/* БАНЕРЪТ ОСТАВА НЕПРОМЕНЕН */
+
+/* =========================
+   БАНЕР — НЕ ПИПАМЕ
+   ========================= */
+
 .hero{
     position:relative;
     width:100%;
@@ -28,21 +32,28 @@ a{
     max-width:none
 }
 
-/* 5-ТЕ ГОЛЕМИ БУТОНА ПОД БАНЕРА */
+
+/* =========================
+   5 БУТОНА ПОД БАНЕРА
+   ЕДИН РЕД
+   ========================= */
+
 .main-buttons{
     position:absolute;
-    left:9.7%;
-    right:9.7%;
+    left:1%;
+    right:1%;
     bottom:0;
+
     display:grid;
     grid-template-columns:repeat(5,minmax(0,1fr));
     gap:16px;
+
     align-items:start
 }
 
 .main-buttons a{
     display:block;
-    width:250%;
+    width:100%;
     transition:transform .25s ease,filter .25s ease
 }
 
@@ -58,21 +69,26 @@ a{
     aspect-ratio:230/205
 }
 
-/* 3-ТЕ МАЛКИ БУТОНА ОТДОЛУ */
+
+/* =========================
+   3 БУТОНА ОТДОЛУ
+   ========================= */
+
 .footer{
     min-height:110px;
     background:#171717;
     border-top:1px solid rgba(173,135,80,.5);
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     gap:38px;
     padding:18px 24px 26px
 }
 
 .footer a{
     display:block;
-    width:250%;
     transition:transform .25s ease,filter .25s ease
 }
 
@@ -83,10 +99,15 @@ a{
 
 .footer img{
     display:block;
-    width:100%;
-    height:auto;
-    max-width:none
+    width:auto;
+    height:57px;
+    max-width:100%
 }
+
+
+/* =========================
+   TABLET
+   ========================= */
 
 @media(max-width:800px){
 
@@ -99,20 +120,22 @@ a{
         left:auto;
         right:auto;
         bottom:auto;
+
         margin:0 20px;
         padding-top:10px;
+
         grid-template-columns:repeat(2,1fr);
         gap:12px
     }
 
     .main-buttons a{
-        width:250%
+        width:100%
     }
 
     .main-buttons a:last-child{
         grid-column:1/-1;
         justify-self:center;
-        width:250%
+        width:calc(50% - 6px)
     }
 
     .footer{
@@ -120,26 +143,30 @@ a{
         flex-wrap:wrap
     }
 
-    .footer a{
-        width:250%
+    .footer img{
+        height:48px
     }
 }
+
+
+/* =========================
+   MOBILE
+   ========================= */
 
 @media(max-width:480px){
 
     .main-buttons{
         margin:0 12px;
-        grid-template-columns:1fr;
-        gap:12px
+        grid-template-columns:1fr
     }
 
     .main-buttons a{
-        width:250%
+        width:100%
     }
 
     .main-buttons a:last-child{
         grid-column:auto;
-        width:250%
+        width:100%
     }
 
     .footer{
@@ -147,7 +174,7 @@ a{
         padding:14px
     }
 
-    .footer a{
-        width:250%
+    .footer img{
+        height:42px
     }
 }
