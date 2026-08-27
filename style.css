@@ -84,8 +84,8 @@ a{
     justify-self:center;
     width:calc(50% - 6px);
   }
+}
 
- 
 
 @media(max-width:480px){
   .main-buttons{
@@ -99,10 +99,9 @@ a{
 
   .main-buttons a:last-child{
     grid-column:auto;
-    width:auto;
+    width:100%;
   }
 
- 
   .footer img{
     height:42px;
   }
