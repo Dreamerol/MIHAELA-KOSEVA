@@ -4,9 +4,9 @@ body{margin:0;background:#171717;color:#f4f0e9;font-family:Arial,sans-serif}
 a{color:inherit;text-decoration:none}
 .hero{position:relative;width:100%;padding-bottom:110px;background:#171717}
 .hero-banner{display:block;width:100%;height:auto;max-width:none}
-.main-buttons{position:absolute;left:9.7%;right:9.7%;bottom:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;align-items:start}
-.main-buttons a{display:block;transform:scale(.9);transform-origin:center bottom;transition:transform .25s ease,filter .25s ease}
-.main-buttons a:hover{transform:scale(.9) translateY(-6px);filter:brightness(1.04)}
+.main-buttons{position:absolute;left:9.7%;right:9.7%;bottom:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;align-items:end}
+.main-buttons a{display:block;width:90%;margin:0 auto;transition:transform .25s ease,filter .25s ease}
+.main-buttons a:hover{transform:translateY(-6px);filter:brightness(1.04)}
 .main-buttons img{display:block;width:100%;height:auto;aspect-ratio:230/205}
 .footer{min-height:110px;background:#171717;border-top:1px solid rgba(173,135,80,.5);display:flex;align-items:center;justify-content:center;gap:38px;padding:18px 24px 26px}
 .footer a{display:block;transition:transform .25s ease,filter .25s ease}
