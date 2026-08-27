@@ -56,14 +56,8 @@ a {
 
 .main-buttons {
     position: absolute;
-
     left: 0;
     right: 0;
-
-    /*
-     * Align the bottom of the buttons
-     * with the bottom edge of the banner.
-     */
     bottom: 110px;
 
     width: 100%;
@@ -72,18 +66,8 @@ a {
     justify-content: center;
     align-items: flex-end;
 
-    /*
-     * Space between buttons:
-     * 1.8% of banner width
-     */
     gap: 1.8%;
-
-    margin: 0;
-    padding: 0;
-
-    z-index: 10;
 }
-
 
 /* =========================================
    MAIN BUTTONS
