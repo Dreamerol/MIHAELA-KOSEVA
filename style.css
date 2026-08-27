@@ -1,242 +1,276 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background: #171717;
-  color: #f4f0e9;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #171717;
+    color: #f4f0e9;
+    font-family: Arial, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
-/* =========================
-   HERO / BANNER
-   ========================= */
+
+/* =========================================
+   HERO
+   ========================================= */
 
 .hero {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #171717;
 }
 
 .hero-banner {
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: auto;
-  margin: 0;
-  padding: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
 }
 
 
-/* =========================
-   NAVIGATION
-   ========================= */
+/* =========================================
+   FIVE MAIN BUTTONS
+   ========================================= */
 
-.navigation {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+.main-buttons {
+    position: absolute;
 
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-  gap: 1.8%;
+    width: 100%;
 
-  position: relative;
-  z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    /*
+       5 buttons × 15vw = 75vw
+       4 gaps × 1.8vw = 7.2vw
+       Total = 82.2vw
+    */
+    gap: 1.8vw;
+
+    margin: 0;
+    padding: 0;
+
+    z-index: 10;
 }
 
 
-/* =========================
-   BUTTONS
-   ========================= */
+/* =========================================
+   BUTTON
+   ========================================= */
 
-.navigation .nav-card {
-  display: block;
+.main-buttons a {
+    display: block;
 
-  width: 15%;
-  flex: 0 0 15%;
+    width: 15vw;
+    min-width: 15vw;
+    max-width: 15vw;
 
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  line-height: 0;
-  cursor: pointer;
+    line-height: 0;
 
-  transition:
-    transform 0.25s ease,
-    filter 0.25s ease;
-}
-
-.navigation .nav-card img {
-  display: block;
-
-  width: 100%;
-  height: auto;
-  max-width: none;
-
-  margin: 0;
-  padding: 0;
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
 }
 
 
-/* =========================
-   HOVER / BOUNCE
-   ========================= */
+/* =========================================
+   BUTTON IMAGE
+   ========================================= */
 
-.navigation .nav-card:hover {
-  transform: translateY(-6px);
-  filter: brightness(1.06);
+.main-buttons img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    max-width: none;
 }
 
 
-/* =========================
+/* =========================================
+   BUTTON HOVER / BOUNCE
+   ========================================= */
+
+.main-buttons a:hover {
+    transform: translateY(-6px);
+    filter: brightness(1.04);
+}
+
+
+/* =========================================
    FOOTER
-   ========================= */
+   ========================================= */
 
 .footer {
-  width: 100%;
-  min-height: 110px;
+    min-height: 110px;
 
-  margin: 0;
-  padding: 18px 24px 26px;
+    margin: 0;
+    padding: 18px 24px 26px;
 
-  background: #171717;
+    background: #171717;
 
-  border-top: 1px solid rgba(173, 135, 80, 0.5);
+    border-top: 1px solid rgba(173, 135, 80, 0.5);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  gap: 38px;
+    gap: 38px;
 }
 
 
-/* =========================
-   CONTACT BUTTONS
-   ========================= */
+/* =========================================
+   FOOTER LINKS
+   ========================================= */
 
-.contact-button {
-  display: block;
+.footer a {
+    display: block;
 
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  line-height: 0;
-  cursor: pointer;
-
-  transition:
-    transform 0.25s ease,
-    filter 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
 }
 
-.contact-button:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.08);
-}
-
-.contact-button img {
-  display: block;
-
-  width: auto;
-  height: 57px;
-  max-width: 100%;
-
-  margin: 0;
-  padding: 0;
+.footer a:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.08);
 }
 
 
-/* =========================
+/* =========================================
+   FOOTER IMAGES
+   ========================================= */
+
+.footer img {
+    display: block;
+
+    width: auto;
+    height: 57px;
+
+    max-width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
    TABLET
-   ========================= */
+   ========================================= */
 
 @media (max-width: 800px) {
 
-  .navigation {
-    display: grid;
+    .hero {
+        padding: 0;
+    }
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    .main-buttons {
+        position: relative;
 
-    gap: 12px;
+        left: auto;
+        right: auto;
+        bottom: auto;
 
-    padding: 0 20px;
-  }
+        width: auto;
 
-  .navigation .nav-card {
-    width: 100%;
-    flex: none;
-  }
+        margin: 10px 20px 0;
 
-  .navigation .nav-card:last-child {
-    grid-column: 1 / -1;
+        display: grid;
 
-    width: calc(50% - 6px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    justify-self: center;
-  }
+        gap: 12px;
+    }
 
-  .footer {
-    gap: 10px;
-    flex-wrap: wrap;
-  }
+    .main-buttons a {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+    }
 
-  .contact-button img {
-    height: 48px;
-  }
+    .main-buttons a:last-child {
+        grid-column: 1 / -1;
+
+        width: calc(50% - 6px);
+
+        justify-self: center;
+    }
+
+    .footer {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .footer img {
+        height: 48px;
+    }
 }
 
 
-/* =========================
+/* =========================================
    MOBILE
-   ========================= */
+   ========================================= */
 
 @media (max-width: 480px) {
 
-  .navigation {
-    grid-template-columns: 1fr;
+    .main-buttons {
+        margin: 10px 12px 0;
 
-    gap: 10px;
+        grid-template-columns: 1fr;
 
-    padding: 0 12px;
-  }
+        gap: 10px;
+    }
 
-  .navigation .nav-card,
-  .navigation .nav-card:last-child {
-    grid-column: auto;
+    .main-buttons a {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+    }
 
-    width: 100%;
+    .main-buttons a:last-child {
+        grid-column: auto;
 
-    justify-self: stretch;
-  }
+        width: 100%;
+    }
 
-  .footer {
-    min-height: 95px;
+    .footer {
+        min-height: 95px;
 
-    padding: 14px;
+        padding: 14px;
 
-    gap: 8px;
-  }
+        gap: 8px;
+    }
 
-  .contact-button img {
-    height: 42px;
-  }
+    .footer img {
+        height: 42px;
+    }
 }
