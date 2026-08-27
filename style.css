@@ -70,19 +70,19 @@ a{
     margin:0 20px;
     padding-top:10px;
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr;
     gap:12px;
   }
 
   .main-buttons a{
-    width:auto;
+    width:100%;
     flex:none;
   }
 
   .main-buttons a:last-child{
-    grid-column:1/-1;
-    justify-self:center;
-    width:calc(50% - 6px);
+    grid-column:auto;
+    justify-self:stretch;
+    width:100%;
   }
 }
 
@@ -94,7 +94,7 @@ a{
   }
 
   .main-buttons a{
-    width:auto;
+    width:100%;
   }
 
   .main-buttons a:last-child{
