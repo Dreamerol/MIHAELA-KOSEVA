@@ -20,12 +20,11 @@ a {
 }
 
 
-/* =========================
+/* ==============================
    HERO
-   ========================= */
+   ============================== */
 
 .hero {
-  position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -41,50 +40,55 @@ a {
 }
 
 
-/* =========================
+/* ==============================
    FIVE MAIN BUTTONS
-   ========================= */
+   ============================== */
 
 .navigation {
-  width: 83%;
-  margin: -8% auto 0;
+  width: 100%;
+  margin: -90px 0 0;
   padding: 0;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
 
-  gap: 2%;
+  justify-content: center !important;
+  align-items: flex-start !important;
+
+  gap: 22px;
 
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 
 .navigation .nav-card {
-  flex: 0 0 15%;
-  width: 15%;
+  display: block !important;
 
-  display: block;
+  flex: 0 0 auto !important;
 
-  margin: 0;
-  padding: 0;
+  width: 15vw !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
 
   line-height: 0;
+
   cursor: pointer;
 
   position: relative;
 
   transition:
-    transform 0.2s ease,
-    filter 0.2s ease;
+    transform 0.18s ease,
+    filter 0.18s ease;
 }
 
 .navigation .nav-card img {
   display: block;
 
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
 
   margin: 0;
   padding: 0;
@@ -97,27 +101,26 @@ a {
 
 .navigation .nav-card:hover {
   transform: translateY(-5px);
-  filter: brightness(1.05);
+  filter: brightness(1.06);
 }
 
 
-/* CLICK / PRESS */
+/* CLICK */
 
 .navigation .nav-card:active {
-  transform: translateY(6px) scale(0.97);
-  filter: brightness(0.94);
+  transform: translateY(7px) scale(0.96);
+  filter: brightness(0.93);
 }
 
 
-/* =========================
-   CONTACTS
-   ========================= */
+/* ==============================
+   CONTACT BUTTONS
+   ============================== */
 
 .footer {
   width: 100%;
-
-  margin: 35px 0 0;
-  padding: 40px 20px 50px;
+  margin: 45px 0 0;
+  padding: 35px 20px 50px;
 
   background: #171717;
 
@@ -125,6 +128,8 @@ a {
 
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+
   justify-content: center;
   align-items: center;
 
@@ -134,29 +139,22 @@ a {
 .footer a {
   display: block;
 
-  position: relative;
-  z-index: 10;
+  flex: 0 0 auto;
 
   cursor: pointer;
 
   transition:
-    transform 0.2s ease,
-    filter 0.2s ease;
+    transform 0.18s ease,
+    filter 0.18s ease;
 }
-
-
-/* CONTACT HOVER */
 
 .footer a:hover {
   transform: translateY(-5px);
   filter: brightness(1.08);
 }
 
-
-/* CONTACT CLICK */
-
 .footer a:active {
-  transform: translateY(5px) scale(0.95);
+  transform: translateY(6px) scale(0.95);
   filter: brightness(0.94);
 }
 
@@ -166,7 +164,7 @@ a {
   width: auto;
   height: 90px;
 
-  max-width: 180px;
+  max-width: none;
 
   margin: 0;
   padding: 0;
@@ -175,27 +173,23 @@ a {
 }
 
 
-/* =========================
+/* ==============================
    TABLET
-   ========================= */
+   ============================== */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
   .navigation {
-    width: 90%;
-    gap: 1.5%;
-    margin-top: -7%;
+    margin-top: -70px;
+    gap: 12px;
   }
 
   .navigation .nav-card {
-    flex-basis: 17%;
-    width: 17%;
+    width: 16vw !important;
   }
 
   .footer {
-    gap: 30px;
-    margin-top: 30px;
-    padding: 35px 20px 45px;
+    gap: 28px;
   }
 
   .footer img {
@@ -204,31 +198,28 @@ a {
 }
 
 
-/* =========================
+/* ==============================
    MOBILE
-   ========================= */
+   ============================== */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
   .navigation {
-    width: 94%;
-    gap: 1%;
-    margin-top: -5%;
+    margin-top: -40px;
+    gap: 6px;
   }
 
   .navigation .nav-card {
-    flex-basis: 18.4%;
-    width: 18.4%;
+    width: 18vw !important;
   }
 
   .footer {
-    gap: 15px;
-    margin-top: 25px;
+    gap: 14px;
+    margin-top: 30px;
     padding: 30px 10px 40px;
   }
 
   .footer img {
     height: 60px;
-    max-width: 110px;
   }
 }
