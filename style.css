@@ -15,7 +15,7 @@ a{
 
 
 /* =========================
-   БАНЕР — НЕ ПИПАМЕ
+   БАНЕР — НЕПРОМЕНЕН
    ========================= */
 
 .hero{
@@ -34,31 +34,34 @@ a{
 
 
 /* =========================
-   5 БУТОНА ПОД БАНЕРА
-   ЕДИН РЕД
+   ГОРНИТЕ 5 БУТОНА
+   УВЕЛИЧЕНИ
    ========================= */
 
 .main-buttons{
     position:absolute;
-    left:1%;
-    right:1%;
+    left:3%;
+    right:3%;
     bottom:0;
 
     display:grid;
     grid-template-columns:repeat(5,minmax(0,1fr));
-    gap:16px;
+    gap:10px;
 
-    align-items:start
+    align-items:end
 }
 
 .main-buttons a{
     display:block;
     width:100%;
+    transform:scale(1.35);
+    transform-origin:center bottom;
+
     transition:transform .25s ease,filter .25s ease
 }
 
 .main-buttons a:hover{
-    transform:translateY(-6px);
+    transform:scale(1.39) translateY(-6px);
     filter:brightness(1.04)
 }
 
@@ -71,7 +74,7 @@ a{
 
 
 /* =========================
-   3 БУТОНА ОТДОЛУ
+   ДОЛНИТЕ 3 — ОРИГИНАЛНИ
    ========================= */
 
 .footer{
@@ -129,7 +132,13 @@ a{
     }
 
     .main-buttons a{
-        width:100%
+        width:100%;
+        transform:scale(1.25);
+        transform-origin:center center
+    }
+
+    .main-buttons a:hover{
+        transform:scale(1.29) translateY(-6px)
     }
 
     .main-buttons a:last-child{
@@ -161,7 +170,12 @@ a{
     }
 
     .main-buttons a{
-        width:100%
+        width:100%;
+        transform:scale(1.2)
+    }
+
+    .main-buttons a:hover{
+        transform:scale(1.24) translateY(-6px)
     }
 
     .main-buttons a:last-child{
