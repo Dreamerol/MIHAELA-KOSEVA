@@ -1,172 +1,393 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+/* =========================================
+   RESET
+   ========================================= */
 
-  <meta
-    name="description"
-    content="Mihaela Koseva — Software Engineer focused on Data, Applied AI and Machine Learning."
-  >
+* {
+    box-sizing: border-box;
+}
 
-  <meta name="author" content="Mihaela Koseva">
-  <meta name="theme-color" content="#171717">
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
-  <title>Mihaela Koseva — Software Engineer</title>
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 0;
+    background: #171717;
+    color: #f4f0e9;
+    font-family: Arial, sans-serif;
+}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  >
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <main>
-
-    <!-- HERO -->
-
-    <section class="hero">
-      <img
-        src="assets/hero-banner.png"
-        alt="Mihaela Koseva — Software Engineer"
-        class="hero-banner"
-      >
-    </section>
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
 
-    <!-- FIVE MAIN BUTTONS -->
+/* =========================================
+   MAIN
+   ========================================= */
 
-    <section class="navigation" aria-label="Explore">
-
-      <table class="button-table">
-        <tr>
-
-          <td>
-            <a
-              href="https://www.linkedin.com/in/mihaela-koseva-software-engineer"
-              target="_blank"
-              rel="noopener"
-              class="main-button"
-            >
-              <img
-                src="assets/button-linkedin.png"
-                alt="LinkedIn"
-              >
-            </a>
-          </td>
-
-          <td>
-            <a
-              href="https://github.com/Dreamerol"
-              target="_blank"
-              rel="noopener"
-              class="main-button"
-            >
-              <img
-                src="assets/button-github.png"
-                alt="GitHub"
-              >
-            </a>
-          </td>
-
-          <td>
-            <a
-              href="https://github.com/Dreamerol/PORTFOLIO"
-              target="_blank"
-              rel="noopener"
-              class="main-button"
-            >
-              <img
-                src="assets/button-portfolio.png"
-                alt="Portfolio"
-              >
-            </a>
-          </td>
-
-          <td>
-            <a
-              href="https://github.com/Dreamerol/CARDFOLIO"
-              target="_blank"
-              rel="noopener"
-              class="main-button"
-            >
-              <img
-                src="assets/button-repositories.png"
-                alt="Repositories"
-              >
-            </a>
-          </td>
-
-          <td>
-            <a
-              href="https://github.com/Dreamerol/ALLSTATS"
-              target="_blank"
-              rel="noopener"
-              class="main-button"
-            >
-              <img
-                src="assets/button-stats.png"
-                alt="Stats"
-              >
-            </a>
-          </td>
-
-        </tr>
-      </table>
-
-    </section>
-
-  </main>
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 
-  <!-- CONTACTS -->
+/* =========================================
+   HERO / BANNER
+   ========================================= */
 
-  <footer class="footer">
+.hero {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    background: #171717;
+}
 
-    <a
-      href="mailto:michaelakoseva@gmail.com"
-      aria-label="Email"
-      class="contact-button"
-    >
-      <img
-        src="assets/contact-email.png"
-        alt="Email"
-      >
-    </a>
+.hero-banner {
+    display: block;
 
-    <a
-      href="https://www.linkedin.com/in/mihaela-koseva-software-engineer"
-      target="_blank"
-      rel="noopener"
-      aria-label="LinkedIn"
-      class="contact-button"
-    >
-      <img
-        src="assets/contact-linkedin.png"
-        alt="LinkedIn"
-      >
-    </a>
+    width: 100%;
+    max-width: none;
+    height: auto;
 
-    <a
-      href="https://github.com/Dreamerol"
-      target="_blank"
-      rel="noopener"
-      aria-label="GitHub"
-      class="contact-button"
-    >
-      <img
-        src="assets/contact-github.png"
-        alt="GitHub"
-      >
-    </a>
+    margin: 0;
+    padding: 0;
+}
 
-  </footer>
 
-</body>
-</html>
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.navigation {
+    position: relative;
+
+    width: 100%;
+    height: 0;
+
+    margin: 0;
+    padding: 0;
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   BUTTON TABLE
+   ========================================= */
+
+.button-table {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.button-table tbody {
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+.button-table tr {
+    display: flex;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    justify-content: center;
+    align-items: flex-end;
+
+    /*
+     * Gap = 1.8% of banner width
+     */
+    gap: 1.8%;
+}
+
+.button-table td {
+    display: block;
+
+    /*
+     * Each button = 15% of banner width
+     */
+    width: 15%;
+    flex: 0 0 15%;
+
+    margin: 0;
+    padding: 0;
+
+    vertical-align: bottom;
+}
+
+
+/* =========================================
+   MAIN BUTTON
+   ========================================= */
+
+.main-button {
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 0;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+/* =========================================
+   MAIN BUTTON IMAGE
+   ========================================= */
+
+.main-button img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   BUTTON HOVER / BOUNCE
+   ========================================= */
+
+.main-button:hover {
+    transform: translateY(-6px);
+    filter: brightness(1.05);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    position: relative;
+
+    width: 100%;
+    min-height: 110px;
+
+    margin: 0;
+    padding: 18px 24px 26px;
+
+    background: #171717;
+
+    border-top: 1px solid rgba(173, 135, 80, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 38px;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   CONTACT BUTTONS
+   ========================================= */
+
+.contact-button {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 0;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.08);
+}
+
+
+/* =========================================
+   CONTACT IMAGES
+   ========================================= */
+
+.contact-button img {
+    display: block;
+
+    width: auto;
+    height: 57px;
+
+    max-width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    /*
+     * On smaller screens the buttons
+     * move below the banner.
+     */
+
+    .navigation {
+        height: auto;
+        margin: 10px 0 0;
+    }
+
+    .button-table {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        width: 100%;
+    }
+
+    .button-table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .button-table tr {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        width: auto;
+
+        margin: 0 20px;
+        padding: 0;
+
+        gap: 12px;
+    }
+
+    .button-table td {
+        width: auto;
+        min-width: 0;
+
+        margin: 0;
+        padding: 0;
+
+        flex: none;
+    }
+
+    .button-table td:last-child {
+        grid-column: 1 / -1;
+
+        width: calc(50% - 6px);
+
+        justify-self: center;
+    }
+
+    .footer {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .contact-button img {
+        height: 48px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .button-table tr {
+        grid-template-columns: 1fr;
+
+        margin: 0 12px;
+
+        gap: 10px;
+    }
+
+    .button-table td {
+        width: 100%;
+    }
+
+    .button-table td:last-child {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+    .footer {
+        min-height: 95px;
+
+        padding: 14px;
+
+        gap: 8px;
+    }
+
+    .contact-button img {
+        height: 42px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 360px) {
+
+    .button-table tr {
+        margin: 0 10px;
+        gap: 8px;
+    }
+
+    .footer {
+        padding: 12px 8px;
+        gap: 6px;
+    }
+
+    .contact-button img {
+        height: 38px;
+    }
+}
