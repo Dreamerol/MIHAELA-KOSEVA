@@ -67,11 +67,11 @@ a{
     left:auto;
     bottom:auto;
     width:auto;
-    margin:0 20px;
+    margin:0 8px;
     padding-top:10px;
     display:grid;
-    grid-template-columns:1fr;
-    gap:12px;
+    grid-template-columns:repeat(5,1fr);
+    gap:6px;
   }
 
   .main-buttons a{
@@ -83,26 +83,5 @@ a{
     grid-column:auto;
     justify-self:stretch;
     width:100%;
-  }
-}
-
-
-@media(max-width:480px){
-  .main-buttons{
-    margin:0 12px;
-    grid-template-columns:1fr;
-  }
-
-  .main-buttons a{
-    width:100%;
-  }
-
-  .main-buttons a:last-child{
-    grid-column:auto;
-    width:100%;
-  }
-
-  .footer img{
-    height:42px;
   }
 }
