@@ -1,1 +1,312 @@
 
+:root {
+  --cream: #f1ede6;
+  --paper: #faf8f4;
+  --charcoal: #171717;
+  --ink: #101010;
+  --muted: #66615a;
+  --gold: #ad8750;
+  --line: rgba(23, 23, 23, .16);
+
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.hero-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+
+/* =========================
+   PROJECTS
+   ========================= */
+
+.projects {
+  padding: 115px 6vw 105px;
+  background: var(--cream);
+}
+
+.section-heading {
+  max-width: 1200px;
+  margin: 0 auto 45px;
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: .42em;
+  font-weight: 600;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: 68px;
+  line-height: 1;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.project-card {
+  display: block;
+  padding: 14px 14px 28px;
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
+}
+
+.project-card.light {
+  background: var(--paper);
+}
+
+.project-card.dark {
+  background: var(--charcoal);
+  color: #f4f0e9;
+}
+
+.project-image {
+  aspect-ratio: 1.25;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.7) contrast(1.03);
+  transition:
+    transform .5s ease,
+    filter .5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.035);
+  filter: saturate(.82) contrast(1.05);
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 22px 4px 7px;
+  font-size: 10px;
+  letter-spacing: .25em;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.project-card h3 {
+  font-family: var(--serif);
+  font-size: 32px;
+  margin: 0 4px 7px;
+  font-weight: 600;
+}
+
+.project-card p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0 4px;
+  max-width: 330px;
+}
+
+.dark p {
+  color: #bbb5ac;
+}
+
+
+/* =========================
+   NAVIGATION
+   5 BUTTONS
+   WHITE - BLACK - WHITE - BLACK - WHITE
+   ========================= */
+
+.navigation {
+  padding: 0 6vw 82px;
+  background: var(--cream);
+  max-width: 1400px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.nav-card {
+  display: block;
+  border: 1px solid rgba(23, 23, 23, .18);
+  overflow: hidden;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.nav-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .14);
+}
+
+.nav-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1.1;
+  object-fit: cover;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  min-height: 100px;
+  background: var(--charcoal);
+  color: #eee9df;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 28px;
+
+  font-size: 13px;
+  letter-spacing: .12em;
+}
+
+.footer a {
+  transition: color .25s ease;
+}
+
+.footer a:hover {
+  color: var(--gold);
+}
+
+.footer span {
+  height: 18px;
+  width: 1px;
+  background: var(--gold);
+  opacity: .75;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1050px) {
+
+  .navigation {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 760px) {
+
+  .hero-banner {
+    width: 100%;
+    height: auto;
+  }
+
+  .projects {
+    padding:
+      75px 28px
+      70px;
+  }
+
+  h2 {
+    font-size: 56px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 60px;
+  }
+
+  .footer {
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 28px;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+  h2 {
+    font-size: 48px;
+  }
+
+  .navigation {
+    grid-template-columns: 1fr;
+  }
+
+}
