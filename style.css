@@ -46,23 +46,26 @@ a {
    ========================= */
 
 .navigation {
-  width: 100%;
-  margin: -8vw 0 0;
+  width: 83%;
+  margin: -8% auto 0;
   padding: 0;
 
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
 
   gap: 2%;
+
   position: relative;
   z-index: 10;
 }
 
 .navigation .nav-card {
-  display: block;
-
+  flex: 0 0 15%;
   width: 15%;
+
+  display: block;
 
   margin: 0;
   padding: 0;
@@ -75,16 +78,6 @@ a {
   transition:
     transform 0.2s ease,
     filter 0.2s ease;
-}
-
-.navigation .nav-card:hover {
-  transform: translateY(-5px);
-  filter: brightness(1.05);
-}
-
-.navigation .nav-card:active {
-  transform: translateY(6px) scale(0.97);
-  filter: brightness(0.94);
 }
 
 .navigation .nav-card img {
@@ -100,24 +93,40 @@ a {
 }
 
 
+/* HOVER */
+
+.navigation .nav-card:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.05);
+}
+
+
+/* CLICK / PRESS */
+
+.navigation .nav-card:active {
+  transform: translateY(6px) scale(0.97);
+  filter: brightness(0.94);
+}
+
+
 /* =========================
    CONTACTS
    ========================= */
 
 .footer {
   width: 100%;
-  min-height: 170px;
 
-  margin: 0;
-  padding: 45px 24px 55px;
+  margin: 35px 0 0;
+  padding: 40px 20px 50px;
 
   background: #171717;
 
   border-top: 1px solid rgba(173, 135, 80, 0.5);
 
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 
   gap: 45px;
 }
@@ -135,10 +144,16 @@ a {
     filter 0.2s ease;
 }
 
+
+/* CONTACT HOVER */
+
 .footer a:hover {
   transform: translateY(-5px);
   filter: brightness(1.08);
 }
+
+
+/* CONTACT CLICK */
 
 .footer a:active {
   transform: translateY(5px) scale(0.95);
@@ -151,7 +166,10 @@ a {
   width: auto;
   height: 90px;
 
-  max-width: 160px;
+  max-width: 180px;
+
+  margin: 0;
+  padding: 0;
 
   pointer-events: none;
 }
@@ -164,22 +182,24 @@ a {
 @media (max-width: 800px) {
 
   .navigation {
-    margin-top: -10vw;
+    width: 90%;
     gap: 1.5%;
+    margin-top: -7%;
   }
 
   .navigation .nav-card {
+    flex-basis: 17%;
     width: 17%;
   }
 
   .footer {
     gap: 30px;
-    padding: 38px 20px 48px;
+    margin-top: 30px;
+    padding: 35px 20px 45px;
   }
 
   .footer img {
-    height: 78px;
-    max-width: 140px;
+    height: 75px;
   }
 }
 
@@ -191,21 +211,24 @@ a {
 @media (max-width: 480px) {
 
   .navigation {
-    margin-top: -7vw;
-    gap: 1.2%;
+    width: 94%;
+    gap: 1%;
+    margin-top: -5%;
   }
 
   .navigation .nav-card {
-    width: 18%;
+    flex-basis: 18.4%;
+    width: 18.4%;
   }
 
   .footer {
-    gap: 16px;
-    padding: 30px 12px 40px;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 30px 10px 40px;
   }
 
   .footer img {
-    height: 62px;
-    max-width: 105px;
+    height: 60px;
+    max-width: 110px;
   }
 }
