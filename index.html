@@ -1,135 +1,124 @@
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#171717;color:#f4f0e9;font-family:Arial,sans-serif}
-a{color:inherit;text-decoration:none}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.hero{
-  position:relative;
-  width:100%;
-  padding-bottom:110px;
-  background:#171717
-}
+    <meta name="description" content="Mihaela Koseva — Software Engineer focused on Data, Applied AI and Machine Learning.">
+    <meta name="author" content="Mihaela Koseva">
 
-.hero-banner{
-  display:block;
-  width:100%;
-  height:auto;
-  max-width:none
-}
+    <title>Mihaela Koseva — Software Engineer</title>
 
-.main-buttons{
-  position:absolute;
-  left:9.7%;
-  bottom:0;
-  display:flex;
-  align-items:flex-end;
-  gap:2%
-}
+    <link rel="stylesheet" href="./style.css">
+</head>
 
-.main-buttons a{
-  display:block;
-  width:15%;
-  flex:0 0 15%;
-  transition:transform .25s ease,filter .25s ease
-}
+<body>
 
-.main-buttons a:hover{
-  transform:translateY(-6px);
-  filter:brightness(1.04)
-}
+    <main>
 
-.main-buttons img{
-  display:block;
-  width:100%;
-  height:auto
-}
+        <section class="hero" id="top">
 
-.footer{
-  min-height:110px;
-  background:#171717;
-  border-top:1px solid rgba(173,135,80,.5);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:38px;
-  padding:18px 24px 26px
-}
+            <img
+                class="hero-banner"
+                src="./assets/images/hero-banner.png"
+                alt="Mihaela Koseva — Software Engineer"
+            >
 
-.footer a{
-  display:block;
-  transition:transform .25s ease,filter .25s ease
-}
+            <nav class="main-buttons" aria-label="Main navigation">
 
-.footer a:hover{
-  transform:translateY(-3px);
-  filter:brightness(1.08)
-}
+                <a
+                    href="https://www.linkedin.com/in/mihaela-koseva-software-engineer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="./assets/images/button-linkedin.png"
+                        alt="LinkedIn"
+                    >
+                </a>
 
-.footer img{
-  display:block;
-  width:auto;
-  height:57px;
-  max-width:100%
-}
+                <a
+                    href="https://github.com/Dreamerol"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="./assets/images/button-github.png"
+                        alt="GitHub"
+                    >
+                </a>
 
-@media(max-width:800px){
-  .hero{
-    padding-bottom:0
-  }
+                <a
+                    href="https://github.com/Dreamerol/PORTFOLIO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="./assets/images/button-portfolio.png"
+                        alt="Portfolio"
+                    >
+                </a>
 
-  .main-buttons{
-    position:relative;
-    left:auto;
-    bottom:auto;
-    margin:0 20px;
-    padding-top:10px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px
-  }
+                <a
+                    href="https://github.com/Dreamerol/CARDFOLIO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="./assets/images/button-repositories.png"
+                        alt="Repositories"
+                    >
+                </a>
 
-  .main-buttons a{
-    width:auto;
-    flex:none
-  }
+                <a
+                    href="https://github.com/Dreamerol/ALLSTATS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="./assets/images/button-stats.png"
+                        alt="Stats"
+                    >
+                </a>
 
-  .main-buttons a:last-child{
-    grid-column:1/-1;
-    justify-self:center;
-    width:calc(50% - 6px)
-  }
+            </nav>
 
-  .footer{
-    gap:10px;
-    flex-wrap:wrap
-  }
+        </section>
 
-  .footer img{
-    height:48px
-  }
-}
+    </main>
 
-@media(max-width:480px){
-  .main-buttons{
-    margin:0 12px;
-    grid-template-columns:1fr
-  }
+    <footer class="footer" aria-label="Contact links">
 
-  .main-buttons a{
-    width:auto
-  }
+        <a href="mailto:michaelakoseva@gmail.com">
+            <img
+                src="./assets/images/contact-email.png"
+                alt="Email"
+            >
+        </a>
 
-  .main-buttons a:last-child{
-    grid-column:auto;
-    width:auto
-  }
+        <a
+            href="https://www.linkedin.com/in/mihaela-koseva-software-engineer"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="./assets/images/contact-linkedin.png"
+                alt="LinkedIn"
+            >
+        </a>
 
-  .footer{
-    min-height:95px;
-    padding:14px
-  }
+        <a
+            href="https://github.com/Dreamerol"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="./assets/images/contact-github.png"
+                alt="GitHub"
+            >
+        </a>
 
-  .footer img{
-    height:42px
-  }
-}
+    </footer>
+
+</body>
+</html>
