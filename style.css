@@ -6,7 +6,7 @@ a{color:inherit;text-decoration:none}
 .hero{
   position:relative;
   width:100%;
-  padding-bottom:110px;
+  padding-bottom:130px;
   background:#171717
 }
 
@@ -20,18 +20,15 @@ a{color:inherit;text-decoration:none}
 .main-buttons{
   position:absolute;
   left:9.7%;
-  right:9.7%;
   bottom:0;
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  column-gap:2%;
-  align-items:end
+  display:flex;
+  align-items:flex-end;
+  gap:2%
 }
 
 .main-buttons a{
-  display:flex;
-  justify-content:flex-start;
-  align-items:flex-end;
+  display:block;
+  flex:0 0 auto;
   transition:transform .25s ease,filter .25s ease
 }
 
@@ -42,8 +39,8 @@ a{color:inherit;text-decoration:none}
 
 .main-buttons img{
   display:block;
-  width:85%;
-  height:auto
+  height:130px;
+  width:auto
 }
 
 .footer{
@@ -82,20 +79,21 @@ a{color:inherit;text-decoration:none}
   .main-buttons{
     position:relative;
     left:auto;
-    right:auto;
     bottom:auto;
     margin:0 20px;
     padding-top:10px;
+    display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:12px
   }
 
   .main-buttons a{
-    display:block;
+    width:auto;
   }
 
   .main-buttons img{
     width:100%;
+    height:auto;
   }
 
   .main-buttons a:last-child{
