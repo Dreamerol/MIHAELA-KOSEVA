@@ -25,6 +25,7 @@ a {
    ========================= */
 
 .hero {
+  position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -46,21 +47,22 @@ a {
 
 .navigation {
   width: 100%;
-  margin: 0;
+  margin: -8vw 0 0;
   padding: 0;
 
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 
-  gap: 12px;
+  gap: 2%;
+  position: relative;
+  z-index: 10;
 }
 
 .navigation .nav-card {
   display: block;
 
-  width: auto;
-  max-width: 92vw;
+  width: 15%;
 
   margin: 0;
   padding: 0;
@@ -69,7 +71,6 @@ a {
   cursor: pointer;
 
   position: relative;
-  z-index: 2;
 
   transition:
     transform 0.2s ease,
@@ -82,19 +83,17 @@ a {
 }
 
 .navigation .nav-card:active {
-  transform: translateY(7px) scale(0.98);
-  filter: brightness(0.95);
+  transform: translateY(6px) scale(0.97);
+  filter: brightness(0.94);
 }
 
 .navigation .nav-card img {
   display: block;
 
-  width: auto;
+  width: 100%;
   height: auto;
 
-  max-width: 92vw;
-
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 
   pointer-events: none;
@@ -102,7 +101,7 @@ a {
 
 
 /* =========================
-   CONTACT BUTTONS
+   CONTACTS
    ========================= */
 
 .footer {
@@ -110,7 +109,7 @@ a {
   min-height: 170px;
 
   margin: 0;
-  padding: 40px 24px 50px;
+  padding: 45px 24px 55px;
 
   background: #171717;
 
@@ -127,7 +126,7 @@ a {
   display: block;
 
   position: relative;
-  z-index: 5;
+  z-index: 10;
 
   cursor: pointer;
 
@@ -142,7 +141,7 @@ a {
 }
 
 .footer a:active {
-  transform: translateY(6px) scale(0.96);
+  transform: translateY(5px) scale(0.95);
   filter: brightness(0.94);
 }
 
@@ -165,20 +164,17 @@ a {
 @media (max-width: 800px) {
 
   .navigation {
-    gap: 10px;
+    margin-top: -10vw;
+    gap: 1.5%;
   }
 
   .navigation .nav-card {
-    max-width: 94vw;
-  }
-
-  .navigation .nav-card img {
-    max-width: 94vw;
+    width: 17%;
   }
 
   .footer {
     gap: 30px;
-    padding: 35px 20px 45px;
+    padding: 38px 20px 48px;
   }
 
   .footer img {
@@ -195,15 +191,12 @@ a {
 @media (max-width: 480px) {
 
   .navigation {
-    gap: 8px;
+    margin-top: -7vw;
+    gap: 1.2%;
   }
 
   .navigation .nav-card {
-    max-width: 96vw;
-  }
-
-  .navigation .nav-card img {
-    max-width: 96vw;
+    width: 18%;
   }
 
   .footer {
