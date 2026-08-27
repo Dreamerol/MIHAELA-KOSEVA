@@ -45,6 +45,17 @@
 
 
 
+
+
+<br><br><br><br><br>
+
+
+
+
+
+
+
+
 <div align="center">
 
 <h1 title="Mihaela Koseva (Михаела Косева) • Sofia University (Софийски университет) • SMG (СМГ) • Sofia • GitHub: Dreamerol • github.com/Dreamerol • AI Engineer • Applied Machine Learning • Data Science • Python • C++ • Java • SQL">
@@ -166,7 +177,7 @@ width="320" height="220">
 
 
 
-<br><br><br><br>
+<br><br><br>
 
 
 
@@ -217,7 +228,7 @@ Mihaela Koseva (Михаела Косева) • Sofia University (Софийс�
 
 
 
-<br><br><br><br>
+<br><br><br>
 
 
 
@@ -293,9 +304,6 @@ alt="Mihaela Koseva (Михаела Косева) • Sofia University (Софи
 
 
 <br><br><br><br><br><br>
-
-
-
 
 
 
