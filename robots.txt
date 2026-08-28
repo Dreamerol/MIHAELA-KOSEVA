@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://dreamerol.github.io/MIHAELA-KOSEVA/sitemap.xml
-
