@@ -19,15 +19,12 @@ a {
   text-decoration: none;
 }
 
-
-/* =========================
+/* ==============================
    HERO
-   ========================= */
+================================ */
 
 .hero {
-  position: relative;
   width: 100%;
-  padding-bottom: 110px;
   background: #171717;
 }
 
@@ -35,40 +32,36 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  max-width: none;
 }
 
-
-/* =========================
-   5 MAIN BUTTONS - DESKTOP
-   ========================= */
+/* ==============================
+   5 BUTTONS
+   DESKTOP = 5 IN ONE ROW
+================================ */
 
 .main-buttons {
-  position: absolute;
-  left: 9.7%;
-  bottom: 0;
-
-  width: 80.6%;
-
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
 
-  align-items: flex-end;
-  justify-content: space-between;
+  margin: 0;
+  padding: 20px 0 20px;
 
-  gap: 2%;
+  gap: 0;
 }
 
 .main-buttons a {
   display: block;
 
-  flex: 1 1 0;
-  width: 0;
+  width: 20%;
   min-width: 0;
+  flex: 0 0 20%;
 
   margin: 0;
-  padding: 0;
+  padding: 0 5px;
 
   transition:
     transform 0.25s ease,
@@ -76,27 +69,25 @@ a {
 }
 
 .main-buttons a:hover {
-  transform: translateY(-6px);
-  filter: brightness(1.04);
+  transform: translateY(-5px);
+  filter: brightness(1.08);
 }
 
 .main-buttons img {
   display: block;
   width: 100%;
   height: auto;
-  max-width: 100%;
 }
 
-
-/* =========================
+/* ==============================
    FOOTER
-   ========================= */
+================================ */
 
 .footer {
+  width: 100%;
   min-height: 110px;
 
   background: #171717;
-
   border-top: 1px solid rgba(173, 135, 80, 0.5);
 
   display: flex;
@@ -128,185 +119,76 @@ a {
   max-width: 100%;
 }
 
-
-/* =========================
-   MOBILE
-   =========================
-   
-   На mobile:
-   - картината е отгоре
-   - 5-те бутона са под нея
-   - всички 5 са на ЕДИН ред
-   ========================= */
+/* ==============================
+   TABLET
+================================ */
 
 @media (max-width: 800px) {
 
-  .hero {
-    padding-bottom: 0;
-  }
-
   .main-buttons {
-    position: relative;
-
-    left: auto;
-    bottom: auto;
-
-    width: 100%;
-
-    margin: 0;
-    padding: 10px 5px 0;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
-    align-items: flex-start;
-    justify-content: space-between;
-
-    gap: 5px;
-  }
-
-  .main-buttons a {
-    display: block;
-
-    flex: 1 1 0;
-    width: auto;
-    min-width: 0;
-    max-width: none;
-
-    margin: 0;
-    padding: 0;
-  }
-
-  .main-buttons img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: 100%;
-  }
-
-
-  /* =========================
-     FOOTER - MOBILE
-     ========================= */
-
-  .footer {
-    min-height: 110px;
-
-    background: #171717;
-
-    padding: 18px 20px 24px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 12px;
 
+    padding: 15px 20px 20px;
+  }
+
+  .main-buttons a {
+    width: 100%;
+    min-width: 0;
+    flex: none;
+
+    padding: 0;
+  }
+
+  .main-buttons a:last-child {
+    grid-column: 1 / -1;
+
+    width: calc(50% - 6px);
+    justify-self: center;
+  }
+
+  .footer {
+    gap: 10px;
     flex-wrap: wrap;
   }
 
   .footer img {
-    width: auto;
     height: 48px;
-    max-width: 100%;
   }
 }
 
-
-/* =========================
-   SMALL MOBILE
-   max-width: 480px
-   ========================= */
+/* ==============================
+   MOBILE
+================================ */
 
 @media (max-width: 480px) {
 
   .main-buttons {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    padding: 12px;
+  }
+
+  .main-buttons a,
+  .main-buttons a:last-child {
     width: 100%;
-
-    margin: 0;
-
-    padding: 7px 3px 0;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
-    gap: 3px;
+    grid-column: auto;
   }
-
-  .main-buttons a {
-    flex: 1 1 0;
-
-    width: auto;
-    min-width: 0;
-    max-width: none;
-  }
-
-  .main-buttons img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: 100%;
-  }
-
-
-  /* FOOTER */
 
   .footer {
     min-height: 95px;
 
-    padding: 14px 10px;
-
     gap: 8px;
 
-    flex-wrap: wrap;
+    padding: 14px;
   }
 
   .footer img {
-    height: 40px;
-    width: auto;
-  }
-}
-
-
-/* =========================
-   VERY SMALL PHONES
-   max-width: 360px
-   ========================= */
-
-@media (max-width: 360px) {
-
-  .main-buttons {
-    width: 100%;
-
-    padding: 5px 2px 0;
-
-    gap: 2px;
-  }
-
-  .main-buttons a {
-    flex: 1 1 0;
-
-    width: auto;
-    min-width: 0;
-  }
-
-  .main-buttons img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  /* FOOTER */
-
-  .footer {
-    gap: 6px;
-    padding: 10px 8px;
-  }
-
-  .footer img {
-    height: 36px;
+    height: 42px;
   }
 }
 ```
