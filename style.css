@@ -1,4 +1,5 @@
-```css
+
+
 * {
   box-sizing: border-box;
 }
@@ -57,7 +58,7 @@ a {
 .main-buttons {
   width: 100%;
   margin: 0;
-  padding: 20px 2%;
+  padding: 20px 0;
 
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -65,6 +66,7 @@ a {
 
   box-sizing: border-box;
 }
+
 
 .main-buttons a {
   display: block;
@@ -94,48 +96,6 @@ a {
   margin: 0;
   padding: 0;
   border: 0;
-}
-
-/* ================================
-   FOOTER
-================================ */
-
-.footer {
-  width: 100%;
-  min-height: 110px;
-
-  background: #171717;
-
-  border-top: 1px solid rgba(173, 135, 80, 0.5);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 38px;
-
-  padding: 18px 24px 26px;
-}
-
-.footer a {
-  display: block;
-
-  transition:
-    transform 0.25s ease,
-    filter 0.25s ease;
-}
-
-.footer a:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.08);
-}
-
-.footer img {
-  display: block;
-
-  width: auto;
-  height: 57px;
-  max-width: 100%;
 }
 
 /* ================================
@@ -199,14 +159,6 @@ a {
     grid-column: auto;
   }
 
-  .footer {
-    min-height: 95px;
-    gap: 8px;
-    padding: 14px;
-  }
-
-  .footer img {
-    height: 42px;
-  }
+  
 }
 ```
