@@ -1,3 +1,4 @@
+```css
 * {
   box-sizing: border-box;
 }
@@ -39,7 +40,7 @@ a {
 
 
 /* =========================
-   5 MAIN BUTTONS
+   5 MAIN BUTTONS - DESKTOP
    ========================= */
 
 .main-buttons {
@@ -63,7 +64,6 @@ a {
   display: block;
 
   flex: 1 1 0;
-  width: 0;
   min-width: 0;
 
   margin: 0;
@@ -130,6 +130,7 @@ a {
 
 /* =========================
    MOBILE
+   0 - 800px
    ========================= */
 
 @media (max-width: 800px) {
@@ -138,6 +139,12 @@ a {
     padding-bottom: 0;
   }
 
+  /* 
+     MOBILE:
+     1 2
+     3 4
+     5
+  */
   .main-buttons {
     position: relative;
 
@@ -149,58 +156,88 @@ a {
     margin: 0;
     padding: 10px 5px 0;
 
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    align-items: flex-start;
-    justify-content: space-between;
+    gap: 6px;
 
-    gap: 3px;
+    align-items: start;
   }
 
   .main-buttons a {
     display: block;
 
-    flex: 1 1 0 !important;
+    width: 100%;
+    min-width: 0;
 
-    width: 0 !important;
-    min-width: 0 !important;
-    max-width: none !important;
+    margin: 0;
+    padding: 0;
 
-    margin: 0 !important;
-    padding: 0 !important;
+    flex: none;
   }
 
-  .main-buttons a:last-child {
-    flex: 1 1 0 !important;
-    width: 0 !important;
-    min-width: 0 !important;
-    max-width: none !important;
+  /* 5th button = full width */
+  .main-buttons a:nth-child(5) {
+    grid-column: 1 / -1;
   }
 
   .main-buttons img {
     display: block;
 
-    width: 100% !important;
-    height: auto !important;
+    width: 100%;
+    height: auto;
 
-    max-width: 100% !important;
+    max-width: 100%;
   }
 
+  /* FOOTER */
+
   .footer {
-    gap: 10px;
+    min-height: 110px;
+
+    padding: 18px 20px 24px;
+
+    gap: 12px;
+
     flex-wrap: wrap;
   }
 
   .footer img {
     height: 48px;
+    width: auto;
   }
 }
 
 
 /* =========================
    SMALL MOBILE
+   481 - 600px
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .main-buttons {
+    padding: 8px 4px 0;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 4px;
+  }
+
+  .footer {
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .footer img {
+    height: 44px;
+  }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+   0 - 480px
    ========================= */
 
 @media (max-width: 480px) {
@@ -208,72 +245,64 @@ a {
   .main-buttons {
     width: 100%;
 
-    margin: 0;
-    padding: 8px 3px 0;
+    padding: 6px 3px 0;
 
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 2px;
+    gap: 3px;
   }
 
-  .main-buttons a,
-  .main-buttons a:last-child {
-    display: block;
+  .main-buttons a {
+    width: 100%;
+  }
 
-    flex: 1 1 0 !important;
-
-    width: 0 !important;
-    min-width: 0 !important;
-    max-width: none !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
+  .main-buttons a:nth-child(5) {
+    grid-column: 1 / -1;
   }
 
   .main-buttons img {
-    display: block;
-
-    width: 100% !important;
-    height: auto !important;
-
-    max-width: 100% !important;
+    width: 100%;
+    height: auto;
   }
+
+  /* FOOTER */
 
   .footer {
     min-height: 95px;
 
-    padding: 14px;
+    padding: 14px 10px;
 
     gap: 8px;
+
     flex-wrap: wrap;
   }
 
   .footer img {
-    height: 42px;
+    height: 40px;
   }
 }
 
 
 /* =========================
-   VERY SMALL PHONES
+   EXTRA SMALL PHONES
+   0 - 360px
    ========================= */
 
 @media (max-width: 360px) {
 
   .main-buttons {
-    padding-left: 2px;
-    padding-right: 2px;
-    gap: 1px;
+    padding: 5px 2px 0;
+
+    gap: 2px;
   }
 
   .footer {
-    gap: 5px;
-    padding: 10px;
+    gap: 6px;
+    padding: 10px 8px;
   }
 
   .footer img {
-    height: 38px;
+    height: 36px;
   }
 }
+```
