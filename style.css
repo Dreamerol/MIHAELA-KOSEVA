@@ -9,6 +9,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   background: #171717;
   color: #f4f0e9;
   font-family: Arial, sans-serif;
@@ -19,36 +20,51 @@ a {
   text-decoration: none;
 }
 
-/* ==============================
+/* ================================
    HERO
 ================================ */
 
 .hero {
   width: 100%;
+  margin: 0;
+  padding: 0;
   background: #171717;
+}
+
+/* Main hero image */
+
+.hero > a {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-banner {
   display: block;
   width: 100%;
   height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-/* ==============================
-   5 BUTTONS
-   DESKTOP = 5 IN ONE ROW
+/* ================================
+   MAIN BUTTONS
+   EXACTLY 5 IN ONE ROW
 ================================ */
 
 .main-buttons {
   width: 100%;
+  margin: 0;
+  padding: 20px 2%;
+
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
-  align-items: stretch;
 
-  margin: 0;
-  padding: 20px 0 20px;
+  justify-content: space-between;
+  align-items: flex-start;
 
   gap: 0;
 }
@@ -56,12 +72,11 @@ a {
 .main-buttons a {
   display: block;
 
-  width: 20%;
-  min-width: 0;
-  flex: 0 0 20%;
+  width: 19%;
+  flex: 0 0 19%;
 
   margin: 0;
-  padding: 0 5px;
+  padding: 0;
 
   transition:
     transform 0.25s ease,
@@ -69,17 +84,22 @@ a {
 }
 
 .main-buttons a:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   filter: brightness(1.08);
 }
 
 .main-buttons img {
   display: block;
+
   width: 100%;
   height: auto;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-/* ==============================
+/* ================================
    FOOTER
 ================================ */
 
@@ -88,6 +108,7 @@ a {
   min-height: 110px;
 
   background: #171717;
+
   border-top: 1px solid rgba(173, 135, 80, 0.5);
 
   display: flex;
@@ -114,12 +135,13 @@ a {
 
 .footer img {
   display: block;
+
   width: auto;
   height: 57px;
   max-width: 100%;
 }
 
-/* ==============================
+/* ================================
    TABLET
 ================================ */
 
@@ -127,6 +149,7 @@ a {
 
   .main-buttons {
     display: grid;
+
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 12px;
@@ -136,16 +159,14 @@ a {
 
   .main-buttons a {
     width: 100%;
-    min-width: 0;
     flex: none;
-
-    padding: 0;
   }
 
   .main-buttons a:last-child {
     grid-column: 1 / -1;
 
     width: calc(50% - 6px);
+
     justify-self: center;
   }
 
@@ -159,13 +180,15 @@ a {
   }
 }
 
-/* ==============================
+/* ================================
    MOBILE
 ================================ */
 
 @media (max-width: 480px) {
 
   .main-buttons {
+    display: grid;
+
     grid-template-columns: 1fr;
 
     gap: 10px;
@@ -181,9 +204,7 @@ a {
 
   .footer {
     min-height: 95px;
-
     gap: 8px;
-
     padding: 14px;
   }
 
