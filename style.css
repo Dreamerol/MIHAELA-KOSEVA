@@ -1,6 +1,10 @@
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
@@ -84,7 +88,13 @@ a{
   max-width:100%;
 }
 
+
+/* =========================
+   TABLET / MOBILE
+   ========================= */
+
 @media(max-width:800px){
+
   .hero{
     padding-bottom:0;
   }
@@ -94,22 +104,25 @@ a{
     left:auto;
     bottom:auto;
     width:auto;
-    margin:0 20px;
+    margin:0 10px;
     padding-top:10px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
+
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+
+    gap:6px;
   }
 
   .main-buttons a{
-    width:auto;
-    flex:none;
+    display:block;
+    width:20%;
+    flex:0 0 20%;
   }
 
   .main-buttons a:last-child{
-    grid-column:1/-1;
-    justify-self:center;
-    width:calc(50% - 6px);
+    width:20%;
+    flex:0 0 20%;
   }
 
   .footer{
@@ -122,19 +135,27 @@ a{
   }
 }
 
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
 @media(max-width:480px){
+
   .main-buttons{
-    margin:0 12px;
-    grid-template-columns:1fr;
+    margin:0 6px;
+    padding-top:8px;
+    gap:4px;
   }
 
   .main-buttons a{
-    width:auto;
+    width:20%;
+    flex:0 0 20%;
   }
 
   .main-buttons a:last-child{
-    grid-column:auto;
-    width:auto;
+    width:20%;
+    flex:0 0 20%;
   }
 
   .footer{
