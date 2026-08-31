@@ -1,320 +1,279 @@
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  margin:0;
-  background:#171717;
-  color:#f4f0e9;
-  font-family:Arial,sans-serif;
+body {
+  margin: 0;
+  background: #171717;
+  color: #f4f0e9;
+  font-family: Arial, sans-serif;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 
-/* ========================================
+/* =========================
    HERO
-   ======================================== */
+   ========================= */
 
-.hero{
-  position:relative;
-  width:100%;
-  padding-bottom:110px;
-  background:#171717;
+.hero {
+  position: relative;
+  width: 100%;
+  padding-bottom: 110px;
+  background: #171717;
 }
 
-.hero-banner{
-  display:block;
-  width:100%;
-  height:auto;
-  max-width:none;
+.hero-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
 }
 
 
-/* ========================================
-   MAIN BUTTONS - DESKTOP
-   ======================================== */
+/* =========================
+   5 MAIN BUTTONS
+   ========================= */
 
-.main-buttons{
-  position:absolute;
-  left:9.7%;
-  bottom:0;
+.main-buttons {
+  position: absolute;
+  left: 9.7%;
+  bottom: 0;
 
-  width:80.6%;
+  width: 80.6%;
 
-  display:grid;
-  grid-template-columns:repeat(5,minmax(0,1fr));
-  grid-template-rows:auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 
-  gap:2%;
+  align-items: flex-end;
+  justify-content: space-between;
 
-  align-items:end;
+  gap: 2%;
 }
 
-.main-buttons a{
-  display:block;
-  width:100%;
-  min-width:0;
+.main-buttons a {
+  display: block;
+
+  flex: 1 1 0;
+  width: 0;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
 
   transition:
-    transform .25s ease,
-    filter .25s ease;
+    transform 0.25s ease,
+    filter 0.25s ease;
 }
 
-.main-buttons a:hover{
-  transform:translateY(-6px);
-  filter:brightness(1.04);
+.main-buttons a:hover {
+  transform: translateY(-6px);
+  filter: brightness(1.04);
 }
 
-.main-buttons img{
-  display:block;
-  width:100%;
-  height:auto;
-  max-width:100%;
+.main-buttons img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 
-/* ========================================
+/* =========================
    FOOTER
-   ======================================== */
+   ========================= */
 
-.footer{
-  min-height:110px;
+.footer {
+  min-height: 110px;
 
-  background:#171717;
+  background: #171717;
 
-  border-top:1px solid rgba(173,135,80,.5);
+  border-top: 1px solid rgba(173, 135, 80, 0.5);
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  gap:38px;
+  gap: 38px;
 
-  padding:18px 24px 26px;
+  padding: 18px 24px 26px;
 }
 
-.footer a{
-  display:block;
+.footer a {
+  display: block;
 
   transition:
-    transform .25s ease,
-    filter .25s ease;
+    transform 0.25s ease,
+    filter 0.25s ease;
 }
 
-.footer a:hover{
-  transform:translateY(-3px);
-  filter:brightness(1.08);
+.footer a:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
 }
 
-.footer img{
-  display:block;
-  width:auto;
-  height:57px;
-  max-width:100%;
+.footer img {
+  display: block;
+  width: auto;
+  height: 57px;
+  max-width: 100%;
 }
 
 
-/* ========================================
-   TABLET
-   ======================================== */
+/* =========================
+   MOBILE
+   ========================= */
 
-@media(max-width:800px){
+@media (max-width: 800px) {
 
-  .hero{
-    padding-bottom:0;
+  .hero {
+    padding-bottom: 0;
   }
 
-  /*
-     5 БУТОНА НА ЕДИН РЕД
-  */
+  .main-buttons {
+    position: relative;
 
-  .main-buttons{
-    position:relative;
+    left: auto;
+    bottom: auto;
 
-    left:auto;
-    bottom:auto;
+    width: 100%;
 
-    width:100%;
+    margin: 0;
+    padding: 10px 5px 0;
 
-    margin:0;
-    padding:10px 6px 0;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
 
-    display:grid;
+    align-items: flex-start;
+    justify-content: space-between;
 
-    grid-template-columns:
-      repeat(5,minmax(0,1fr));
-
-    grid-template-rows:auto;
-
-    column-gap:4px;
-    row-gap:0;
-
-    align-items:start;
+    gap: 3px;
   }
 
-  .main-buttons a{
-    display:block;
+  .main-buttons a {
+    display: block;
 
-    width:100%;
-    min-width:0;
-    max-width:none;
+    flex: 1 1 0 !important;
 
-    margin:0;
-    padding:0;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
 
-    grid-column:auto !important;
-    grid-row:1 !important;
-
-    flex:none;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  .main-buttons a:last-child{
-    display:block;
-
-    width:100%;
-    min-width:0;
-    max-width:none;
-
-    grid-column:5 !important;
-    grid-row:1 !important;
+  .main-buttons a:last-child {
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
   }
 
-  .main-buttons img{
-    display:block;
+  .main-buttons img {
+    display: block;
 
-    width:100%;
-    height:auto;
+    width: 100% !important;
+    height: auto !important;
 
-    max-width:100%;
+    max-width: 100% !important;
   }
 
-  /*
-     FOOTER
-  */
-
-  .footer{
-    gap:10px;
-    flex-wrap:wrap;
+  .footer {
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
-  .footer img{
-    height:48px;
+  .footer img {
+    height: 48px;
   }
 }
 
 
-/* ========================================
+/* =========================
    SMALL MOBILE
-   ======================================== */
+   ========================= */
 
-@media(max-width:480px){
+@media (max-width: 480px) {
 
-  .main-buttons{
-    width:100%;
+  .main-buttons {
+    width: 100%;
 
-    margin:0;
-    padding:8px 4px 0;
+    margin: 0;
+    padding: 8px 3px 0;
 
-    display:grid;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
 
-    grid-template-columns:
-      repeat(5,minmax(0,1fr));
-
-    grid-template-rows:1fr;
-
-    column-gap:3px;
-    row-gap:0;
+    gap: 2px;
   }
 
-  .main-buttons a{
-    width:100% !important;
-    min-width:0 !important;
-    max-width:none !important;
+  .main-buttons a,
+  .main-buttons a:last-child {
+    display: block;
 
-    grid-column:auto !important;
-    grid-row:1 !important;
+    flex: 1 1 0 !important;
 
-    margin:0 !important;
-    padding:0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  .main-buttons a:nth-child(1){
-    grid-column:1 !important;
+  .main-buttons img {
+    display: block;
+
+    width: 100% !important;
+    height: auto !important;
+
+    max-width: 100% !important;
   }
 
-  .main-buttons a:nth-child(2){
-    grid-column:2 !important;
+  .footer {
+    min-height: 95px;
+
+    padding: 14px;
+
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
-  .main-buttons a:nth-child(3){
-    grid-column:3 !important;
-  }
-
-  .main-buttons a:nth-child(4){
-    grid-column:4 !important;
-  }
-
-  .main-buttons a:nth-child(5){
-    grid-column:5 !important;
-  }
-
-  .main-buttons img{
-    display:block;
-
-    width:100% !important;
-    height:auto !important;
-
-    max-width:100% !important;
-  }
-
-
-  /* ====================================
-     FOOTER - SMALL MOBILE
-     ==================================== */
-
-  .footer{
-    min-height:95px;
-
-    padding:14px;
-
-    gap:8px;
-
-    flex-wrap:wrap;
-  }
-
-  .footer img{
-    height:42px;
+  .footer img {
+    height: 42px;
   }
 }
 
 
-/* ========================================
+/* =========================
    VERY SMALL PHONES
-   ======================================== */
+   ========================= */
 
-@media(max-width:360px){
+@media (max-width: 360px) {
 
-  .main-buttons{
-    padding-left:2px;
-    padding-right:2px;
-
-    column-gap:2px;
+  .main-buttons {
+    padding-left: 2px;
+    padding-right: 2px;
+    gap: 1px;
   }
 
-  .footer{
-    gap:5px;
-    padding:10px;
+  .footer {
+    gap: 5px;
+    padding: 10px;
   }
 
-  .footer img{
-    height:38px;
+  .footer img {
+    height: 38px;
   }
 }
