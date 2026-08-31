@@ -58,7 +58,7 @@ a {
 .main-buttons {
   width: 100%;
   margin: 0;
-  padding: 20px 0;
+  padding: 20px 5px;
 
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
