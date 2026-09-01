@@ -139,16 +139,17 @@ a {
   .main-buttons {
     display: grid;
 
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 
-    gap: 10px;
+    gap: 4px;
 
-    padding: 12px 0;
+    padding: 10px 0;
   }
 
   .main-buttons a,
   .main-buttons a:last-child {
     width: 100%;
+    min-width: 0;
     grid-column: auto;
   }
 
