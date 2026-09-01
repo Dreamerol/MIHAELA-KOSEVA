@@ -148,7 +148,21 @@ a {
   }
 
 
+/* ================================
+   HIDE LINK TEXT UNDER BUTTONS
+================================ */
 
+.main-buttons a {
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+.main-buttons a img {
+  font-size: initial;
+  line-height: normal;
+  text-indent: 0;
+}
   
   
 }
