@@ -111,7 +111,7 @@ a {
 
     gap: 12px;
 
-    padding: 15px 20px 20px;
+    padding: 15px 0 20px;
   }
 
   .main-buttons a {
@@ -127,14 +127,7 @@ a {
     justify-self: center;
   }
 
-  .footer {
-    gap: 10px;
-    flex-wrap: wrap;
-  }
 
-  .footer img {
-    height: 48px;
-  }
 }
 
 /* ================================
