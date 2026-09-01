@@ -151,3 +151,18 @@ a {
   
 }
 
+
+/* HIDE URL TEXT UNDER MAIN BUTTONS */
+
+.main-buttons a {
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-indent: 0 !important;
+}
+
+.main-buttons a img {
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+Важно
+
