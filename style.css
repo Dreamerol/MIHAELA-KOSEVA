@@ -107,24 +107,18 @@ a {
   .main-buttons {
     display: grid;
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 
-    gap: 12px;
+    gap: 5px;
 
     padding: 15px 0 20px;
   }
 
-  .main-buttons a {
-    width: 100%;
-    flex: none;
-  }
-
+  .main-buttons a,
   .main-buttons a:last-child {
-    grid-column: 1 / -1;
-
-    width: calc(50% - 6px);
-
-    justify-self: center;
+    width: 100%;
+    min-width: 0;
+    grid-column: auto;
   }
 
 
