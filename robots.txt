@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dreamerol.github.io/MIHAELA-KOSEVA/sitemap.xml
+Sitemap: https://dreamerol.github.io/MIHAELA-KOSEVA-AI/sitemap.xml
+
